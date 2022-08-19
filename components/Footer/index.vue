@@ -1,6 +1,5 @@
 <template>
   <footer :class="['bd-footer', 'text-muted', { 'docs-border': isDocs }]">
-    <b-container>
       <b-row class="justify-content-center">
         <b-col cols="12" sm order-sm="3" class="text-center text-sm-right">
           <b-link to="/" class="d-inline-block mx-auto">
@@ -56,15 +55,6 @@
         <a href="https://nuxtjs.org/" target="_blank">Nuxt.js</a><template v-if="!isNetlify && !isVercel">.</template>
 
       </p>
-
-      <template v-if="isVercel">
-        <p class="mt-3 text-center">
-          <a href="https://vercel.com/?utm_source=bootstrapvue" target="_blank" rel="noopener">
-
-          </a>
-        </p>
-      </template>
-    </b-container>
   </footer>
 </template>
 

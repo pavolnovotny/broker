@@ -21,12 +21,18 @@
      </div>
    </b-container>
 
+   <FlipCard/>
+
  </div>
 </template>
 
 <script>
+import FlipCard from '../components/shared/FlipCard'
 export default {
-  name: 'NuxtTutorial'
+  name: 'NuxtTutorial',
+  components: {
+    FlipCard
+  }
 }
 </script>
 
