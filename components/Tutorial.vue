@@ -2,7 +2,7 @@
 <template>
  <div>
    <b-container>
-
+    {{testing}}
      <div>
        <b-jumbotron style="background-image: url(https://picsum.photos/1024/400/?image=41); background-size: 100%;" class="jumbotron" header="BootstrapVue" lead="Bootstrap v4 Components for Vue.js 2">
          <p>For more information visit website</p>
@@ -32,6 +32,11 @@ export default {
   name: 'NuxtTutorial',
   components: {
     FlipCard
+  },
+  computed: {
+    testing () {
+      return process.env.KEY || 0
+    }
   }
 }
 </script>
