@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .flip-card {
   background-color: transparent;
-  width: 300px;
+  max-width: 300px;
   height: 300px;
   perspective: 1000px;
 }

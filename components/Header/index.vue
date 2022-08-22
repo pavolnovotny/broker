@@ -1,5 +1,4 @@
 <template>
-
     <b-navbar sticky toggleable="lg" type="dark" variant="info">
       <b-navbar-brand href="#">NavBar</b-navbar-brand>
       <div class="mb-2">
