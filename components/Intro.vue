@@ -1,7 +1,9 @@
 <template>
   <section id="home" class="section-showcase">
     <div class="container">
-      <img src="@/static/images/new.png" alt="" />
+      <div class="left">
+        <img src="@/static/images/new.png" alt="" />
+      </div>
       <div>
         <h1>The headphones of the future.</h1>
         <p>

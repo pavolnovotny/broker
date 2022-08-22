@@ -1,11 +1,19 @@
 <template>
-  <div class="flip-card" tabIndex="0">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <h3>Hover, please!</h3>
-      </div>
-      <div class="flip-card-back">
-        <h3>Whoaaa!!!</h3>
+  <div class="container">
+    <div class="Box">
+      <div class="FlipBox">
+        <div class="Front">
+          <img src="https://3.bp.blogspot.com/-_HHywRbdSvs/XwygqxQom9I/AAAAAAAAAHI/wasuf6tD9FgfWAuqvLXh729-myCavjnCQCPcBGAYYCw/s1600/image11.jpg">
+        </div>
+        <div class="Back">
+          <div>
+            <h3>This Is Title Article</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -18,64 +26,104 @@ export default {
 </script>
 
 <style scoped>
-.flip-card {
-  background-color: transparent;
-  max-width: 300px;
-  height: 300px;
-  perspective: 1000px;
+.container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
+.Box{
+  position:relative;
+  width:350px;
+  min-height:350px;
+  transform-style:preserve-3d;
+  perspective:800px;
+  transition:1s;
+  margin:5px;
+}
+.Box .FlipBox{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
   height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
+  transition:1s;
+  transform-style:preserve-3d;
+  box-shadow:0px 0px 10px 2px rgba(0,0,0,.3);
 }
-
-.flip-card:focus {
-  outline: 0;
+.Box .Front,
+.Box .Back{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  cursor:pointer;
+  transition:.5s;
+  backface-visibility:hidden;
 }
-
-.flip-card:hover .flip-card-inner,
-.flip-card:focus .flip-card-inner{
-  transform: rotateY(180deg);
+.Box .Front img{
+  width:100%;
+  height:100%;
 }
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.Box .Back{
+  background-color:#081a25;
+  color:#fff;
+  display:table;
+  transform:rotateY(180deg);
 }
-
-.flip-card-front {
-  background: linear-gradient(to left, #4364f7, #6fb1fc);
-  color: black;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.Box .Back div{
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  padding:20px;
 }
-
-.flip-card-back {
-  background: linear-gradient(to right, #4364f7, #6fb1fc);
-  color: white;
-  transform: rotateY(180deg);
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.Box .Back div h3{
+  font-size:22px;
 }
-h3 {
-  font-size: 20px;
-  font-family: Verdana, sans-serif;
-  font-weight: bold;
-  color: #fff;
+.Box .Back div p{
+  font-size:17px;
+  margin-top:10px;
 }
-
+.Box .Back div a{
+  color:#fff;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:20px;
+  width:120px;
+  height:45px;
+  background-color:#fff;
+  color:#222;
+  line-height:45px;
+  box-shadow:0px 0px 10px rgba(0,0,0,.5);
+  transition:.5s;
+  font-weight:bold;
+}
+.Box .Back div a:hover{
+  background-color:#081a25;
+  color:#fff;
+}
+.Box:hover .FlipBox{
+  transform:rotateY(180deg);
+}
+.Box:hover{
+  transform:translateY(-30px);
+  z-index:2;
+}
+@media (max-width:780px){
+  .Box:not(:last-child):hover{
+    transform:translateY(0px);
+    z-index:2;
+  }
+}
+@media (max-width:520px){
+  .Box:hover{
+    transform:translateY(0px);
+    z-index:2;
+  }
+}
+@media (max-width:255px){
+  .Box{
+    width:100%;
+  }
+}
 </style>

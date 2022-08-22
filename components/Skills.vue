@@ -1,65 +1,21 @@
 <template>
-  <section class="services">
-    <div>
-      <b-container fluid>
-        <h1 class="">SLUZBY</h1>
-      <div>
-        <b-card-group deck>
-          <b-card bg-variant="primary" text-variant="white" header="Primary" class="text-center">
-            <b-card-text>Lorem ipsum dolor sit amet, consectetur adipisciLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitng elit.</b-card-text>
-          </b-card>
-
-          <b-card bg-variant="secondary" text-variant="white" header="Secondary" class="text-center">
-            <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-          </b-card>
-
-          <b-card bg-variant="success" text-variant="white" header="Success" class="text-center">
-            <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-          </b-card>
-        </b-card-group>
-      </div>
-      <div class="mt-3">
-        <b-card-group deck>
-          <b-card bg-variant="info" text-variant="white" header="Info" class="text-center">
-            <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-          </b-card>
-
-          <b-card bg-variant="warning" text-variant="white" header="Warning" class="text-center">
-            <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-          </b-card>
-
-          <b-card bg-variant="danger" text-variant="white" header="Danger" class="text-center">
-            <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-          </b-card>
-        </b-card-group>
-      </div>
-      <div class="mt-3">
-        <b-card-group deck>
-          <b-card bg-variant="light" header="Light" class="text-center">
-            <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-          </b-card>
-
-          <b-card bg-variant="dark" header="Dark" text-variant="white" class="text-center">
-            <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-          </b-card>
-
-          <b-card header="Default" class="text-center">
-            <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-          </b-card>
-        </b-card-group>
-      </div>
-      </b-container>
-    </div>
-  </section>
+    <b-container fluid>
+      <b-row align-h="center" align-v="center">
+        <b-col sm="12" md="4" xl="4"><FlipCard/></b-col>
+        <b-col sm="12" md="4" xl="4"><FlipCard/></b-col>
+        <b-col sm="12" md="4" xl="4"><FlipCard/></b-col>
+        <b-col sm="12" md="4" xl="4"><FlipCard/></b-col>
+      </b-row>
+    </b-container>
 </template>
 
 <script>
-// import FlipCard from './shared/FlipCard'
+import FlipCard from './shared/FlipCard'
 export default {
-  name: 'Skills-landing '
-  // components: {
-  //   FlipCard
-  // }
+  name: 'Skills-landing ',
+  components: {
+    FlipCard
+  }
 }
 </script>
 
