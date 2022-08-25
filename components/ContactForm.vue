@@ -4,6 +4,16 @@
     <input type="text" name="user_name">
     <label>Email</label>
     <input type="email" name="user_email">
+    <label>Service type</label>
+    <select>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+    <input type="email" name="user_email">
+    <label>Telephone</label>
+    <input type="tel" name="user_telephone">
     <label>Message</label>
     <textarea name="message"></textarea>
     <input type="submit" value="Send">
@@ -22,6 +32,7 @@ export default {
         }, (error) => {
           console.log('FAILED...', error.text)
         })
+      this.$refs.form.reset()
     }
   }
 }
