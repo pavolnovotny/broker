@@ -3,15 +3,15 @@
     <div class="Box">
       <div class="FlipBox">
         <div class="Front">
+          <div class="centered">
+            <h1 class="text-center">Predaj nehnetulnosti</h1>
+          </div>
           <img src="https://3.bp.blogspot.com/-_HHywRbdSvs/XwygqxQom9I/AAAAAAAAAHI/wasuf6tD9FgfWAuqvLXh729-myCavjnCQCPcBGAYYCw/s1600/image11.jpg">
         </div>
         <div class="Back">
           <div>
-            <h3>This Is Title Article</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <p>Spolupracujem s tímom finančných špecialistov, ktorí Vám dokážu kompletne zaistiť najvýhodnejšiu hypotéku a všetky záležitosti okolo financovania.
             </p>
-            <a href="#">Learn More</a>
           </div>
         </div>
       </div>
@@ -26,6 +26,14 @@ export default {
 </script>
 
 <style scoped>
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
 .container {
   display:flex;
   justify-content:center;
@@ -33,7 +41,7 @@ export default {
 }
 .Box{
   position:relative;
-  width:350px;
+  width:400px;
   min-height:350px;
   transform-style:preserve-3d;
   perspective:800px;
@@ -106,7 +114,6 @@ export default {
   transform:rotateY(180deg);
 }
 .Box:hover{
-  transform:translateY(-30px);
   z-index:2;
 }
 @media (max-width:780px){

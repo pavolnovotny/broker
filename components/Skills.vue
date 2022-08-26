@@ -1,7 +1,7 @@
 <template>
     <b-container fluid>
+      <b-row align-h="center" align-v="center" class="pt-5 pb-5"><h1>SLUZBY</h1></b-row>
       <b-row align-h="center" align-v="center">
-        <b-col sm="12" md="4" xl="4"><FlipCard/></b-col>
         <b-col sm="12" md="4" xl="4"><FlipCard/></b-col>
         <b-col sm="12" md="4" xl="4"><FlipCard/></b-col>
         <b-col sm="12" md="4" xl="4"><FlipCard/></b-col>

@@ -1,3 +1,51 @@
 {
-  "message": "Bonjour"
+  "message": "Bonjour",
+  "intro": {
+    "text": "Váš certifikovaný realitný maklér patriaci pod najväčšiu realitnú kanceláriu na svete Keller Williams. Vašu nehnuteľnosť viem predať/prenajať rýchlo a za maximálnu cenu.",
+    "myService": "Moje služby"
+  },
+  "services": {
+    "Services": "Služby",
+    "sellingProperties": "Predaj nehnuteľností",
+    "sellingPropertiesText": "S využitím mojich skúseností a služieb dokážem rýchlo a za maximálnu cenu predať Vašu nehnuteľnosť.",
+    "marketingAndPropagation": "Marketing a propagácia",
+    "marketingAndPropagationText": "Nadštandardný marketing pre Vašu nehnuteľnosť.Cez reklamy na sociálnych sieťach až po využitie mojich známostí na predaj.",
+    "homeStaging": "Home Staging",
+    "homeStagingText": "Interiér Vašej nehnuteľnosti tak ako ho nepoznáte! Spoločne so špecialistkou v odbore premeníme interiér Vašej nehnuteľnosti na ten najlepší čo môže mať.",
+    "legalService": "Právny servis",
+    "legalServiceText": "Spolupracujem s tímom právnych špecialistov. Postarám sa o všetky právne záležitosti spojené s vašou nehnuteľnosťou od A do Z.",
+    "rentingProperties": "Prenájom nehnuteľnosti",
+    "rentingPropertiesText": "Len v Prahe sa priemerne prenajíma 5 000 bytov mesačne, so mnou máte istotu, že ten Váš sa medzi nimi nestratí a nájde rýchlo bonitného záujemcu.",
+    "web": "Vlastný web nehnuteľnosti",
+    "webText": "Pre Vaše nehnuteľnosti nechám vytvoriť modernú webovú prezentáciu. Táto služba pomáha záujemcom sa naozaj rozhodnúť a nehnuteľnosť si zaobstarať.",
+    "virtualVisitation": "Virtuálne prehliadky",
+    "virtualVisitationText": "Interaktívna 3d prehliadka Vašej nehnuteľnosti. Zážitok, ktorý potencionálnemu záujemcovi dodá z pohodlia domova pocit akoby v nehnuteľnosti naozaj bol.",
+    "propertiesFinancing": "Financovanie nehnuteľnosti",
+    "propertiesFinancingText": "Spolupracujem s tímom finančných špecialistov, ktorí Vám dokážu kompletne zaistiť najvýhodnejšiu hypotéku a všetky záležitosti okolo financovania.",
+    "propertiesSearching": "Vyhľadávanie nehnuteľností",
+    "propertiesSearchingText": "Preverím právny stav, celkový stav nehnuteľnosti, fond opráv, históriu nehnuteľností, maklér, ktorý nehnuteľnosť ponúka, realitné zákulisia celej transakcie, vyjednám zľavu a budem Vám asistovať pri všetkých prehliadkach.",
+    "photosAndVideos": "Fotky, videá, dron",
+    "photosAndVideosText": "Zaujímavá videoprehliadka, kvalitné fotografie, pohľad na samotnú nehnuteľnosť a jej okolie z vtáčieho pohľadu formou dronu. Tento základ prezentácie pre Vašu nehnuteľnosť rád zrealizujem.",
+    "paintingAndCleaning": "Opravy, maľovanie, upratovanie",
+    "paintingAndCleaningText": "Vďaka svojim skúsenostiam sa nebojím ani tejto práce. Ak usúdim, že je to potrebné, tak nehnuteľnosť vlastnoručne vymaľujem, opravím a samozrejme upratám.",
+    "propertyManagement": "Správa nehnuteľností",
+    "propertyManagementText": "Svojimi nadobudnutými skúsenosťami a kontaktmi so správy nehnuteľností dokážem Váš prázdny byt dlhodobo obsadiť bezprobémovým nájomcom."
+  },
+  "about": {
+    "AboutMe": "O mne",
+    "text1": "Mám za sebou viac ako 5 ročné skúsenosti s realitami. Začínal som ako správca nehnuteľností v Prahe, špeciálne  pre zahraničných majiteľov a investorov. Táto práca ma naučila, že okamžité riešenie požiadaviek klienta je základom dobrej a dlhodobej spolupráce do budúcnosti.",
+    "text2": "Následne ma moja životná cesta zaviedla na oddelenie výstavby pre zahraničnú korporáciu pôsobiacu po celej republike. Práca s projektantmi, architektmi a stavebnými firmami rozšírila moje technické znalosti. Vďaka získaným skúsenostiam a marketingovým stratégiám dokážem Vašu nehnuteľnosť rýchlo predať alebo prenajať.",
+    "text3": "Mojím cieľom je dlhodobá spolupráca a spokojnosť klientov. Pokiaľ chcete získať spokojného nájomcu alebo predať nehnuteľnosť za najvyššiu možnú cenu, kontaktujte ma."
+  },
+  "WhyWorkWithMe": "Prečo spolupracovať so mnou",
+  "contact": {
+    "Contact": "Kontakt",
+    "name": "Meno",
+    "familyName": "Priezvisko",
+    "serviceType": "Typ služby",
+    "Telephone": "Telefón",
+    "Message": "Správa",
+    "Send": "Odoslať"
+  },
+  "footer": "© 2022 Michal Smiga. Certifikovaný realitný maklér. IČO: 05237891 Všetky práva vyhradené"
 }

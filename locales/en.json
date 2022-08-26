@@ -1,3 +1,51 @@
 {
-  "message": "Hello!"
+  "message": "Bonjour",
+  "intro": {
+    "text": "Your certified real estate agent under the largest real estate agency in the world, Keller Williams. I can sell/rent your property quickly and for the maximum price.",
+    "myService": "My services"
+  },
+  "services": {
+    "Services": "Služby",
+    "sellingProperties": "Sale of real estate",
+    "sellingPropertiesText": "Using my experience and services, I can sell your property quickly and for the maximum price.",
+    "marketingAndPropagation": "Marketing and Promotion",
+    "marketingAndPropagationText": "Superior marketing for your property. Through ads on social networks to using my acquaintances to sell.",
+    "homeStaging": "Home Staging",
+    "homeStagingText": "The interior of your property as you know it! Together with a specialist in the field, we will transform the interior of your property into the best it can have.",
+    "legalService": "Legal service",
+    "legalServiceText": "I will take care of all legal matters related to your real estate from A to Z.",
+    "rentingProperties": "Rental property",
+    "rentingPropertiesText": "In Prague alone, an average of 5,000 apartments are rented per month, with me you can be sure that yours will not get lost among them and will quickly find a creditworthy applicant.",
+    "web": "Own real estate website",
+    "webText": "I will create a modern web presentation for your real estate. This service helps interested parties to make a real decision and buy a property.",
+    "virtualVisitation": "Virtual tours",
+    "virtualVisitationText": "Interactive 3D tour of your property. An experience that gives the potential buyer the feeling of being in the property from the comfort of their own home.",
+    "propertiesFinancing": "Real estate financing",
+    "propertiesFinancingText": "I work with a team of financial specialists who can provide you with the most favorable mortgage and all matters related to financing.",
+    "propertiesSearching": "Property search",
+    "propertiesSearchingText": "I will check the legal status, the general condition of the property, the repair fund, the history of the property, the broker who offers the property, the real estate behind the scenes of the entire transaction, I will negotiate a discount and I will assist you during all inspections.",
+    "photosAndVideos": "Photos, videos, drone",
+    "photosAndVideosText": "An interesting video tour, high-quality photos, a view of the property itself and its surroundings from a bird's eye view in the form of a drone. ",
+    "paintingAndCleaning": "Repairs, painting, cleaning",
+    "paintingAndCleaningText": "Thanks to my experience, I am not afraid of this job either. If I decide that it is necessary, I will paint, repair and, of course, clean the property myself.",
+    "propertyManagement": "Real estate management",
+    "propertyManagementText": "with my acquired experience and contacts with real estate management, I can occupy your empty apartment with a problem-free tenant for a long time."
+  },
+  "about": {
+    "AboutMe": "About me",
+    "text1": "I have more than 5 years of real estate experience. I started as a property manager in Prague, especially  for foreign owners and investors. This work taught me that the immediate solution of the client's requirements is the basis of good and long-term cooperation in the future.",
+    "text2": "Subsequently, my life path took me to the construction department for a foreign corporation operating throughout the country. Working with designers, architects and construction companies broadened my technical knowledge. Thanks to the acquired experience and marketing strategies, I can quickly sell or rent your property.",
+    "text3": "My goal is long-term cooperation and client satisfaction. If you want to get a satisfied tenant or sell the property for the highest possible price, contact me."
+  },
+  "WhyWorkWithMe": "Why work with me",
+  "contact": {
+    "Contact": "Contact",
+    "name": "Name",
+    "familyName": "Family name",
+    "serviceType": "Type of service",
+    "Telephone": "telephone",
+    "Message": "Message",
+    "Send": "Send"
+  },
+  "footer": "© 2022 Michal Smiga. Certified Realtor. ID: 05237891 All rights reserved"
 }
