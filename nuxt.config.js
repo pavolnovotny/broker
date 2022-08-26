@@ -3,6 +3,16 @@ require('dotenv').config()
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  extend(config, ctx) {
+    if (ctx.isDev && ctx.isClient) {
+      config.module.rules.push({
+        enforce: "pre",
+        test: /\.(js|vue)$/,
+        loader: "eslint-loader",
+        exclude: /(node_modules)/
+      });
+    }
+  },
   head: {
     title: 'smiga-broker',
     meta: [
@@ -28,7 +38,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~plugins/vue-cookie-law.js', ssr: false }
+    { src: '~plugins/vue-cookie-law.js', ssr: false },
+    {src: '~/plugins/vuelidate.js', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -98,3 +109,5 @@ export default {
     },
   }
 }
+
+
