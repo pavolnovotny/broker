@@ -6,7 +6,7 @@
     <b-container fluid>
       <b-row align-v="end" align-h="end">
         <b-embed
-          class="mapa"
+          class="mapa mb-0"
           type="iframe"
           aspect="16by9"
           src="https://www.google.com.qa/maps/d/embed?mid=1-9mYKUGgMjBXZt_KO6SHHOfZ6dvNX3c&ehbc=2E312F"
@@ -19,7 +19,14 @@
 
 <script>
 export default {
-  name: 'contact-page'
+  name: 'contact-page',
+  nuxtI18n: {
+    paths: {
+      cz: '/kontakt',
+      sk: '/kontakt',
+      en: '/contact'
+    }
+  }
 }
 </script>
 

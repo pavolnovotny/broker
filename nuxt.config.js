@@ -52,6 +52,7 @@ export default {
     [
       'nuxt-i18n',
       {
+        strategy: 'prefix_except_default',
         vueI18nLoader: true,
         defaultLocale: 'cz',
         locales: [

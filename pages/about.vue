@@ -22,7 +22,14 @@
 
 <script>
 export default {
-  name: 'about-page'
+  name: 'about-page',
+  nuxtI18n: {
+    paths: {
+      cz: '/o-mne',
+      sk: '/o-mne',
+      en: '/about'
+    }
+  }
 }
 </script>
 

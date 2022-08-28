@@ -1,19 +1,17 @@
 <template>
     <b-navbar sticky toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      <b-navbar-brand href="#"><img src="@/static/images/logo.svg"/></b-navbar-brand>
+      <LangugageInput/>
       <div class="mb-2">
-        <b-avatar text="BV"></b-avatar>
-        <b-avatar text="a"></b-avatar>
-        <b-avatar text="Foo"></b-avatar>
-        <b-avatar text="BV" size="4rem"></b-avatar>
       </div>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">Link</b-nav-item>
-          <b-nav-item href="#" disabled>Disabled</b-nav-item>
+          <nuxt-link :to="localePath('/')">{{ $t('pages.home') }}</nuxt-link>
+          <nuxt-link :to="localePath('about')">{{ $t('pages.about') }}</nuxt-link>
+          <nuxt-link :to="localePath('contact')">{{ $t('pages.contact') }}</nuxt-link>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -34,6 +32,7 @@
             <!-- Using 'button-content' slot -->
             <template #button-content>
               <em>User</em>
+              <b-icon-arrow-up/>
             </template>
             <b-dropdown-item href="#">Profile</b-dropdown-item>
             <b-dropdown-item href="#">Sign Out</b-dropdown-item>
@@ -45,8 +44,14 @@
 </template>
 
 <script>
+import { BIconArrowUp } from 'bootstrap-vue'
+import LangugageInput from '../LangugageInput'
 export default {
-  name: 'index-header'
+  name: 'index-header',
+  components: {
+    BIconArrowUp,
+    LangugageInput
+  }
 }
 </script>
 

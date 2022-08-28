@@ -1,5 +1,10 @@
 {
-  "message": "Bonjour",
+  "pages": {
+    "home": "domu",
+    "about": "o-mne",
+    "contact": "kontakt"
+  },
+  "message": "cc",
   "intro": {
     "text": "Váš certifikovaný realitní makléř spadající pod největší realitní kancelář na světě Keller Williams. Vaší nemovitost umím prodat/pronajmout rychle a  za maximální cenu.",
     "myService": "Moje služby"

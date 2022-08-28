@@ -2,7 +2,6 @@
 <template>
  <div>
    <b-container>
-     <LangugageInput/>
       <ContactForm/>
      <h1>{{ $t('message') }}</h1>
 
@@ -11,13 +10,10 @@
 </template>
 
 <script>
-
-import LangugageInput from './LangugageInput'
 import ContactForm from './ContactForm'
 export default {
   name: 'NuxtTutorial',
   components: {
-    LangugageInput,
     ContactForm
   }
 }
