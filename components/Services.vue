@@ -3,7 +3,7 @@
     <b-container fluid>
       <h1 class="pt-5 pb-5 text-center">{{ $t('services.Services') }}</h1>
       <b-row align-h="center" align-v="center">
-        <b-col v-for="service in services" :key="service.id" sm="12" md="4" xl="4">
+        <b-col v-for="(service, i) in services" :key="i" sm="12" md="4" xl="3">
           <FlipCard :type="service.type" :text="service.text"  />
         </b-col>
       </b-row>
@@ -22,74 +22,62 @@ export default {
         {
           type: this.$t('services.sellingProperties'),
           text: this.$t('services.sellingPropertiesText'),
-          src: 'sell-property',
-          id: 1
+          src: 'sell-property'
         },
         {
           type: this.$t('services.marketingAndPropagation'),
           text: this.$t('services.marketingAndPropagationText'),
-          src: 'sell-property',
-          id: 2
+          src: 'sell-property'
         },
         {
           type: this.$t('services.homeStaging'),
           text: this.$t('services.homeStagingText'),
-          src: 'sell-property',
-          id: 3
+          src: 'sell-property'
         },
         {
           type: this.$t('services.legalService'),
           text: this.$t('services.legalServiceText'),
-          src: 'sell-property',
-          id: 4
+          src: 'sell-property'
         },
         {
           type: this.$t('services.rentingProperties'),
           text: this.$t('services.rentingPropertiesText'),
-          src: 'sell-property',
-          id: 5
+          src: 'sell-property'
         },
         {
           type: this.$t('services.web'),
           text: this.$t('services.webText'),
-          src: 'sell-property',
-          id: 6
+          src: 'sell-property'
         },
         {
           type: this.$t('services.virtualVisitation'),
           text: this.$t('services.virtualVisitationText'),
-          src: 'sell-property',
-          id: 7
+          src: 'sell-property'
         },
         {
           type: this.$t('services.propertiesFinancing'),
           text: this.$t('services.propertiesFinancingText'),
-          src: 'sell-property',
-          id: 8
+          src: 'sell-property'
         },
         {
           type: this.$t('services.propertiesSearching'),
           text: this.$t('services.propertiesSearchingText'),
-          src: 'sell-property',
-          id: 9
+          src: 'sell-property'
         },
         {
           type: this.$t('services.photosAndVideos'),
           text: this.$t('services.photosAndVideosText'),
-          src: 'sell-property',
-          id: 10
+          src: 'sell-property'
         },
         {
           type: this.$t('services.paintingAndCleaning'),
           text: this.$t('services.paintingAndCleaningText'),
-          src: 'sell-property',
-          id: 11
+          src: 'sell-property'
         },
         {
           type: this.$t('services.propertyManagement'),
           text: this.$t('services.propertyManagementText'),
-          src: 'sell-property',
-          id: 12
+          src: 'sell-property'
         }
       ]
     }

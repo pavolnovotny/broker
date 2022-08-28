@@ -6,7 +6,7 @@
         <div>
           <h1>Ing. Michal Šmiga</h1>
           <p>{{ $t('banner.text') }}</p>
-          <b-button href="#myService" variant="success">{{ $t('banner.myService') }}</b-button>
+          <b-button variant="success">{{ $t('banner.myService') }}</b-button>
         </div>
       </b-col>
       <b-col md="6">

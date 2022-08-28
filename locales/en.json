@@ -50,7 +50,21 @@
     "serviceType": "Type of service",
     "Telephone": "telephone",
     "Message": "Message",
-    "Send": "Send"
+    "Send": "Send",
+    "SaleProperty": "Sale of real estate",
+    "RentalProperty": "Rental property",
+    "Financing": "Real estate financing",
+    "Management": "Real estate management",
+    "Search": "Property search",
+    "AnotherTopic": "Another topic",
+    "nameRequired": "First name is required.",
+    "surnameRequired": "Surname is required.",
+    "emailRequired": "Email is required.",
+    "telephoneRequired": "Telephone number is required.",
+    "serviceRequired": "Type of service is required.",
+    "messageRequired": "Message is required.",
+    "invalidEmail": "Email is invalid.",
+    "invalidTelephone": "Telephone number is invalid."
   },
   "footer": "© 2022 Michal Smiga. Certified Realtor. ID: 05237891 All rights reserved"
 }

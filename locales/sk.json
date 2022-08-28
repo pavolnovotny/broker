@@ -50,7 +50,21 @@
     "serviceType": "Typ služby",
     "Telephone": "Telefón",
     "Message": "Správa",
-    "Send": "Odoslať"
+    "Send": "Odoslať",
+    "SaleProperty": "Predaj nehnuteľnosti",
+    "RentalProperty": "Prenájom nehnuteľnosti",
+    "Financing": "Financovanie nehnuteľnosti",
+    "Management": "Správa nehnuteľností",
+    "Search": "Vyhľadávanie nehnuteľností",
+    "AnotherTopic": "Iná téma",
+    "nameRequired": "Zadajte prosím meno.",
+    "surnameRequired": "Zadajte prosím priezvisko.",
+    "emailRequired": "Zadajte prosím email.",
+    "telephoneRequired": "Zadajte prosím telefónné číslo.",
+    "serviceRequired": "Zadajte prosím typ služby.",
+    "messageRequired": "Zadajte prosím spŕavu.",
+    "invalidEmail": "Nesprávny tvar emailu.",
+    "invalidTelephone": "Nesprávny tvar telefónného čísla."
   },
   "footer": "© 2022 Michal Smiga. Certifikovaný realitný maklér. IČO: 05237891 Všetky práva vyhradené"
 }

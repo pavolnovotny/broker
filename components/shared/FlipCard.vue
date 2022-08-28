@@ -51,8 +51,8 @@ export default {
 }
 .Box{
   position:relative;
-  width:400px;
-  min-height:350px;
+  width:300px;
+  min-height:250px;
   transform-style:preserve-3d;
   perspective:800px;
   transition:1s;
