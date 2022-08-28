@@ -1,6 +1,6 @@
 <template>
     <b-navbar sticky toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#"><img src="@/static/images/logo.svg"/></b-navbar-brand>
+      <b-navbar-brand href="#"><img src="~/static/images/logo.svg"/></b-navbar-brand>
       <LangugageInput/>
       <div class="mb-2">
       </div>
@@ -9,9 +9,9 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <nuxt-link :to="localePath('/')">{{ $t('pages.home') }}</nuxt-link>
-          <nuxt-link :to="localePath('about')">{{ $t('pages.about') }}</nuxt-link>
-          <nuxt-link :to="localePath('contact')">{{ $t('pages.contact') }}</nuxt-link>
+          <b-nav-item><nuxt-link :to="localePath('/')">{{ $t('pages.home') }}</nuxt-link></b-nav-item>
+          <b-nav-item><nuxt-link :to="localePath('about')">{{ $t('pages.about') }}</nuxt-link></b-nav-item>
+          <b-nav-item><nuxt-link :to="localePath('contact')">{{ $t('pages.contact') }}</nuxt-link></b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->

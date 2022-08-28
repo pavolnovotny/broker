@@ -1,16 +1,16 @@
-<template>
+<template functional>
   <div class="container">
     <div class="Box">
       <div class="FlipBox">
         <div class="Front">
           <div class="centered">
-            <h1 class="text-center">Predaj nehnetulnosti</h1>
+            <h1 class="text-center FrontText">{{props.type}}</h1>
           </div>
-          <img src="https://3.bp.blogspot.com/-_HHywRbdSvs/XwygqxQom9I/AAAAAAAAAHI/wasuf6tD9FgfWAuqvLXh729-myCavjnCQCPcBGAYYCw/s1600/image11.jpg">
+          <img src="~/static/images/sell-property.jpg">
         </div>
         <div class="Back">
           <div>
-            <p>Spolupracujem s tímom finančných špecialistov, ktorí Vám dokážu kompletne zaistiť najvýhodnejšiu hypotéku a všetky záležitosti okolo financovania.
+            <p>{{props.text}}
             </p>
           </div>
         </div>
@@ -21,7 +21,17 @@
 
 <script>
 export default {
-  name: 'Flip-card'
+  name: 'Flip-card',
+  props: {
+    type: {
+      type: String,
+      required: true
+    },
+    text: {
+      type: String,
+      required: true
+    }
+  }
 }
 </script>
 
@@ -72,6 +82,9 @@ export default {
 .Box .Front img{
   width:100%;
   height:100%;
+}
+.FrontText {
+  color: white;
 }
 .Box .Back{
   background-color:#081a25;

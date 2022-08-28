@@ -5,12 +5,12 @@
     "contact": "contact"
   },
   "message": "Bonjour",
-  "intro": {
+  "banner": {
     "text": "Your certified real estate agent under the largest real estate agency in the world, Keller Williams. I can sell/rent your property quickly and for the maximum price.",
     "myService": "My services"
   },
   "services": {
-    "Services": "Služby",
+    "Services": "Services",
     "sellingProperties": "Sale of real estate",
     "sellingPropertiesText": "Using my experience and services, I can sell your property quickly and for the maximum price.",
     "marketingAndPropagation": "Marketing and Promotion",
