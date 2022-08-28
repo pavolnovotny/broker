@@ -88,3 +88,9 @@ export default {
 }
 
 </script>
+
+<style scoped>
+section {
+  padding-bottom: 60px;
+}
+</style>

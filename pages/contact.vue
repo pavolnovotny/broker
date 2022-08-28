@@ -3,17 +3,7 @@
     <b-container>
       <ContactForm/>
     </b-container>
-    <b-container fluid>
-      <b-row align-v="end" align-h="end">
-        <b-embed
-          class="mapa mb-0"
-          type="iframe"
-          aspect="16by9"
-          src="https://www.google.com.qa/maps/d/embed?mid=1-9mYKUGgMjBXZt_KO6SHHOfZ6dvNX3c&ehbc=2E312F"
-          allowfullscreen
-        ></b-embed>
-      </b-row>
-    </b-container>
+
   </section>
 </template>
 

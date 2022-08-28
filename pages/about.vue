@@ -1,23 +1,35 @@
 <template>
-  <b-container>
-    <b-row class="roww">
-      <b-col md="4" class="foto">
-        <b-img thumbnail src="@/static/images/stramak.png" fluid alt="Responsive image"></b-img>
-      </b-col>
-      <b-col align-v="center" align-h="center" md="8">
-        <div>
-          <h1>The headphones of the future.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            repudiandae rerum libero ipsum asperiores omnis mollitia, nostrum
-            commodi placeat ea itaque modi corrupti corporis nam voluptas aut
-            reprehenderit eaque culpa.
-          </p>
-          <a href="#about" class="btn">Read More</a>
-        </div>
-      </b-col>
-    </b-row>
-  </b-container>
+  <section>
+    <b-container>
+      <h1>{{ $t('about.AboutMe') }}</h1>
+      <b-row class="roww">
+        <b-col md="4" class="foto">
+          <b-img thumbnail src="@/static/images/stramak.png" fluid alt="Responsive image"></b-img>
+        </b-col>
+        <b-col align-v="center" align-h="center" md="8">
+          <div>
+            <h1>Ing. Michal Šmiga</h1>
+            <p>{{ $t('about.text1') }}</p>
+            <p>{{ $t('about.text2') }}</p>
+            <p>{{ $t('about.text3') }}</p>
+            <b-button><nuxt-link :to="localePath('contact')">{{ $t('pages.contact') }}</nuxt-link></b-button>
+          </div>
+        </b-col>
+      </b-row>
+
+    </b-container>
+    <b-container fluid>
+      <b-row align-v="end" align-h="end">
+        <b-embed
+          class="mapa mb-0"
+          type="iframe"
+          aspect="16by9"
+          src="https://www.google.com.qa/maps/d/embed?mid=1-9mYKUGgMjBXZt_KO6SHHOfZ6dvNX3c&ehbc=2E312F"
+          allowfullscreen
+        ></b-embed>
+      </b-row>
+    </b-container>
+  </section>
 </template>
 
 <script>
@@ -36,8 +48,5 @@ export default {
 <style scoped>
 .foto {
   padding: 20px;
-}
-.roww {
-  background-color: #353C46;
 }
 </style>
