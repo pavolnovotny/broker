@@ -66,7 +66,7 @@ export default {
   height: 100%;
   transition:1s;
   transform-style:preserve-3d;
-  box-shadow:0px 0px 10px 2px rgba(0,0,0,.3);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .Box .Front,
 .Box .Back{

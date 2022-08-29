@@ -54,13 +54,14 @@ export default {
 
 <style scoped>
 footer {
-  background-color: #41B3A3;
-  border-top: 1px solid black;
+  background-color: #3AAFA9;
+  color: #FEFFFF;
 }
 .logo {
   width: 100px;
   height: 60px;
   display: inline-block;
+  border-radius: 15px 40px;
 }
 .icon {
   margin-right: 8px;
@@ -70,16 +71,16 @@ footer {
 }
 .facebook, .instagram, .linkedin {
   display: inline-block;
-  height: 45px;
-  width: 45px;
+  height: 60px;
+  width: 60px;
   transition: all .2s ease-in-out;
-  background-color: white;
-  margin: 5px;
+  background-color: #FEFFFF;
+  padding: 12px;
   border-radius: 50%;
 }
 
 .facebook:hover,.instagram:hover,.linkedin:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
 .facebook {
@@ -90,5 +91,9 @@ footer {
 }
 .linkedin {
   color: #0A66C2;
+}
+hr {
+  height: 1px;
+  background-color: #FEFFFF;
 }
 </style>
