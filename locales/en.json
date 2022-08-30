@@ -64,7 +64,8 @@
     "serviceRequired": "Type of service is required.",
     "messageRequired": "Message is required.",
     "invalidEmail": "Email is invalid.",
-    "invalidTelephone": "Telephone number is invalid."
+    "invalidTelephone": "Telephone number is invalid.",
+    "sendMeMessage": "Send me a message"
   },
   "footer": "Michal Smiga. Certified Realtor. ID: 05237891 All rights reserved"
 }

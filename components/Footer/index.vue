@@ -22,7 +22,7 @@
               <BIconGeoAlt class="icon align-self-center"/>
               <div><p class="mb-0">Kaprova 52/6 Praha 1</p><p class="mb-0">Křižíkova 506/62 Praha 8</p></div>
             </li>
-            <li class="d-inline-block"><BIconTelephone class="icon"/><span>725 747 519</span></li>
+            <li class="d-inline-block mt-1 mb-1"><BIconTelephone class="icon"/><span>725 747 519</span></li>
             <li class="d-inline-block"><BIconEnvelope class="icon"/><span>michal.smiga@kwcz.cz</span></li>
           </ul>
         </div>

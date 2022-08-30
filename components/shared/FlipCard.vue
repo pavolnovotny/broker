@@ -1,16 +1,16 @@
-<template functional>
+<template>
   <div class="container">
     <div class="Box">
       <div class="FlipBox">
         <div class="Front">
           <div class="centered">
-            <h1 class="text-center FrontText">{{props.type}}</h1>
+            <h1 class="text-center FrontText">{{type}}</h1>
           </div>
-          <img src="~/static/images/sell-property.jpg">
+          <DynamicImage :imageUrl="imageUrl" :alt="imageUrl" />
         </div>
         <div class="Back">
           <div>
-            <p>{{props.text}}
+            <p>{{text}}
             </p>
           </div>
         </div>
@@ -20,14 +20,20 @@
 </template>
 
 <script>
+import DynamicImage from './DynamicImage'
 export default {
   name: 'Flip-card',
+  components: { DynamicImage },
   props: {
     type: {
       type: String,
       required: true
     },
     text: {
+      type: String,
+      required: true
+    },
+    imageUrl: {
       type: String,
       required: true
     }
@@ -48,6 +54,7 @@ export default {
   display:flex;
   justify-content:center;
   align-items:center;
+  margin: 10px;
 }
 .Box{
   position:relative;
@@ -84,7 +91,7 @@ export default {
   height:100%;
 }
 .FrontText {
-  color: white;
+  color: #FEFFFF;
 }
 .Box .Back{
   background-color:#081a25;

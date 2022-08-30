@@ -1,27 +1,30 @@
 <template>
   <section>
+    <b-container fluid class="header">
+      <h1>{{$t('about.AboutMe')}}</h1>
+    </b-container>
     <b-container>
-      <h1>{{ $t('about.AboutMe') }}</h1>
-      <b-row class="roww">
-        <b-col md="4" class="foto">
-          <b-img thumbnail src="@/static/images/stramak.png" fluid alt="Responsive image"></b-img>
-        </b-col>
-        <b-col align-v="center" align-h="center" md="8">
-          <div>
-            <h1>Ing. Michal Šmiga</h1>
-            <p>{{ $t('about.text1') }}</p>
-            <p>{{ $t('about.text2') }}</p>
-            <p>{{ $t('about.text3') }}</p>
-            <b-button><nuxt-link :to="localePath('contact')">{{ $t('pages.contact') }}</nuxt-link></b-button>
-          </div>
-        </b-col>
-      </b-row>
-
+      <main>
+        <b-row>
+          <b-col md="4" class="foto">
+            <b-img thumbnail src="@/static/images/stramak.png" fluid alt="Responsive image"></b-img>
+          </b-col>
+          <b-col align-v="center" align-h="center" md="8">
+            <div>
+              <h1>Ing. Michal Šmiga</h1>
+              <p>{{ $t('about.text1') }}</p>
+              <p>{{ $t('about.text2') }}</p>
+              <p>{{ $t('about.text3') }}</p>
+              <b-button class="cta"><nuxt-link :to="localePath('contact')">{{ $t('pages.contact') }}</nuxt-link></b-button>
+            </div>
+          </b-col>
+        </b-row>
+      </main>
     </b-container>
     <b-container fluid>
-      <b-row align-v="end" align-h="end">
+      <b-row>
         <b-embed
-          class="mapa mb-0"
+          class="map mb-0"
           type="iframe"
           aspect="16by9"
           src="https://www.google.com.qa/maps/d/embed?mid=1-9mYKUGgMjBXZt_KO6SHHOfZ6dvNX3c&ehbc=2E312F"
@@ -47,6 +50,25 @@ export default {
 
 <style scoped>
 .foto {
-  padding: 20px;
+  padding: 0 20px 20px 0;
+}
+.map {
+  max-height: 350px;
+  margin-bottom: 0px;
+}
+.header {
+  background: #DEF2F1;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.cta {
+  background-color: #3AAFA9;
+  color: #FEFFFF;
+}
+
+main {
+  margin-top: 50px;
 }
 </style>

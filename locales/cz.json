@@ -64,7 +64,8 @@
     "serviceRequired": "Zadajte prosím typ služby.",
     "messageRequired": "Zadajte prosím spŕavu.",
     "invalidEmail": "Nesprávny tvar emailu.",
-    "invalidTelephone": "Nesprávny tvar telefónného čísla."
+    "invalidTelephone": "Nesprávny tvar telefónného čísla.",
+    "sendMeMessage": "Napíšte mi"
   },
   "footer": "Michal Smiga. Certifikovaný realitní makléř. IČO: 05237891 Všechna práva vyhrazena"
 }

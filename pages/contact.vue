@@ -1,5 +1,8 @@
 <template>
   <section>
+    <b-container fluid class="header">
+      <h1>{{$t('contact.Contact')}}</h1>
+    </b-container>
     <b-container>
       <ContactForm/>
     </b-container>
@@ -25,7 +28,11 @@ export default {
 </script>
 
 <style scoped>
-.mapa {
-  max-height: 400px;
+.header {
+  background: #DEF2F1;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 15px;
 }
+
 </style>

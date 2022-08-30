@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-sm-8 offset-sm-2">
           <div>
-            <h2>{{ $t('contact.Contact') }}</h2>
+            <h2>{{ $t('contact.sendMeMessage') }}</h2>
             <form ref="form" @submit.prevent="handleSubmit">
 
               <div class="form-group">
