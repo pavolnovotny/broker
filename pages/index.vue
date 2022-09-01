@@ -2,20 +2,23 @@
   <div>
     <Banner/>
     <Services/>
-    <Cooperation/>
+    <OfferedServices/>
+    <About/>
   </div>
 </template>
 
 <script>
 import Banner from '../components/Banner'
 import Services from '../components/Services'
-import Cooperation from '../components/Cooperation'
+import About from '../components/About'
+import OfferedServices from '../components/OfferedServices'
 export default {
   name: 'IndexPage',
   components: {
     Banner,
     Services,
-    Cooperation
+    About,
+    OfferedServices
   }
 }
 </script>

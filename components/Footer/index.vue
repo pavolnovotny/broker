@@ -28,8 +28,7 @@
         </div>
       </b-row>
     </b-container>
-    <hr class="mb-1 mt-1"/>
-    <b-container>
+    <b-container fluid class="footer-bottom">
       <b-row>
         <p class="text-center"> &copy; <span>{{new Date().getFullYear()}}</span> {{ $t('footer') }} </p>
       </b-row>
@@ -54,8 +53,8 @@ export default {
 
 <style scoped>
 footer {
-  background-color: #3AAFA9;
-  color: #FEFFFF;
+  background-color: #06112a;
+  color: rgba(255, 255, 255, 0.7);
 }
 .logo {
   width: 100px;
@@ -68,13 +67,14 @@ footer {
   width: 20px;
   height: 20px;
   font-weight: 900;
+  color: #5ea51d;
 }
 .facebook, .instagram, .linkedin {
   display: inline-block;
   height: 60px;
   width: 60px;
   transition: all .2s ease-in-out;
-  background-color: #FEFFFF;
+  background-color: #fff;
   padding: 12px;
   border-radius: 50%;
 }
@@ -92,8 +92,9 @@ footer {
 .linkedin {
   color: #0A66C2;
 }
-hr {
-  height: 1px;
-  background-color: #FEFFFF;
+
+.footer-bottom {
+  background-color: #050d21;
+  padding: 10px;
 }
 </style>

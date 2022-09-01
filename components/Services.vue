@@ -1,10 +1,145 @@
 <template>
   <section>
-    <b-container fluid>
+    <b-container>
       <h1 class="pt-5 pb-5 text-center">{{ $t('services.Services') }}</h1>
-      <b-row align-h="center" align-v="center">
-        <b-col v-for="(service, i) in services" :key="i" sm="12" md="4" xl="3">
-          <FlipCard :type="service.type" :text="service.text" :imageUrl="require(`~/static/images/services/${service.src}.jpg`)"  />
+      <b-row>
+        <!-- real estate -->
+        <b-col xl="4">
+          <h2>NEMOVITOSTI</h2>
+          <div class="accordion" role="tablist">
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-1 variant="success">{{$t('services.sellingProperties')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.sellingPropertiesText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-2 variant="success">{{$t('services.rentingProperties')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-2" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.rentingPropertiesText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-3 variant="success">{{$t('services.propertiesFinancing')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-3" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.propertiesFinancingText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-4 variant="success">{{$t('services.propertyManagement')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-4" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.propertyManagementText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-5 variant="success">{{$t('services.propertiesSearching')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-5" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.propertiesSearchingText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+          </div>
+        </b-col>
+        <!-- legal service -->
+        <b-col xl="4">
+          <div class="accordion" role="tablist">
+            <h2>LEGAL SERVICE</h2>
+              <b-card class="mb-1">
+                <b-card-header header-tag="header" class="p-1" role="tab">
+                  <b-button block v-b-toggle.accordion-6 variant="success">{{$t('services.legalService')}}</b-button>
+                </b-card-header>
+                <b-collapse id="accordion-6" visible accordion="my-accordion" role="tabpanel">
+                  <b-card-body>
+                    <b-card-text>{{$t('services.legalServiceText')}}</b-card-text>
+                  </b-card-body>
+                </b-collapse>
+              </b-card>
+          </div>
+        </b-col>
+        <!-- Additional -->
+        <b-col xl="4">
+          <h2>ADDITIONAL</h2>
+          <div class="accordion" role="tablist">
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-7 variant="success">{{$t('services.photosAndVideos')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-7" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.photosAndVideosText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-8 variant="success">{{$t('services.paintingAndCleaning')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-8" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.paintingAndCleaningText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-9 variant="success">{{$t('services.homeStaging')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-9" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.homeStagingText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-10 variant="success">{{$t('services.virtualVisitation')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-10" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.virtualVisitationText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-11 variant="success">{{$t('services.web')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-11" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.webText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-12 variant="success">{{$t('services.marketingAndPropagation')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-12" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.marketingAndPropagationText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+          </div>
         </b-col>
       </b-row>
     </b-container>
@@ -12,79 +147,8 @@
 </template>
 
 <script>
-import FlipCard from './shared/FlipCard'
-
 export default {
-  name: 'service-section',
-  data () {
-    return {
-      services: [
-        {
-          type: this.$t('services.sellingProperties'),
-          text: this.$t('services.sellingPropertiesText'),
-          src: 'sell-property'
-        },
-        {
-          type: this.$t('services.marketingAndPropagation'),
-          text: this.$t('services.marketingAndPropagationText'),
-          src: 'marketing-propagation'
-        },
-        {
-          type: this.$t('services.homeStaging'),
-          text: this.$t('services.homeStagingText'),
-          src: 'home-staging'
-        },
-        {
-          type: this.$t('services.legalService'),
-          text: this.$t('services.legalServiceText'),
-          src: 'legal-service'
-        },
-        {
-          type: this.$t('services.rentingProperties'),
-          text: this.$t('services.rentingPropertiesText'),
-          src: 'rent-property'
-        },
-        {
-          type: this.$t('services.web'),
-          text: this.$t('services.webText'),
-          src: 'web'
-        },
-        {
-          type: this.$t('services.virtualVisitation'),
-          text: this.$t('services.virtualVisitationText'),
-          src: 'virtual'
-        },
-        {
-          type: this.$t('services.propertiesFinancing'),
-          text: this.$t('services.propertiesFinancingText'),
-          src: 'money'
-        },
-        {
-          type: this.$t('services.propertiesSearching'),
-          text: this.$t('services.propertiesSearchingText'),
-          src: 'search-property'
-        },
-        {
-          type: this.$t('services.photosAndVideos'),
-          text: this.$t('services.photosAndVideosText'),
-          src: 'photos'
-        },
-        {
-          type: this.$t('services.paintingAndCleaning'),
-          text: this.$t('services.paintingAndCleaningText'),
-          src: 'cleaning'
-        },
-        {
-          type: this.$t('services.propertyManagement'),
-          text: this.$t('services.propertyManagementText'),
-          src: 'management'
-        }
-      ]
-    }
-  },
-  components: {
-    FlipCard
-  }
+  name: 'service-section'
 }
 
 </script>
