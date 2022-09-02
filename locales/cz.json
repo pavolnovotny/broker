@@ -5,6 +5,10 @@
     "contact": "kontakt"
   },
   "message": "cc",
+  "cookies": {
+    "text": "Provozovatel této webové stránky používá cookies pro zajištění funkčnosti tohoto webu a s Vaším souhlasem také pro lepší uživatelský zážitek a pro analýzu návštěvnosti a způsobu využívání webu.",
+    "btn": "Rozumím a souhlasím"
+  },
   "offered services": "Zaujaly Vás nabízené služby?",
   "banner": {
     "text": "Váš certifikovaný realitní makléř spadající pod největší realitní kancelář na světě Keller Williams. Vaší nemovitost umím prodat/pronajmout rychle a  za maximální cenu.",

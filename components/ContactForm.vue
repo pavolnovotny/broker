@@ -1,105 +1,72 @@
 <template>
-  <div class="jumbotron">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 offset-sm-2">
-          <div>
-            <h2>{{ $t('contact.sendMeMessage') }}</h2>
-            <form ref="form" @submit.prevent="handleSubmit">
-
-              <div class="form-group">
-                <label for="firstName">{{ $t('contact.name') }}</label>
-                <input
-                  :class="['form-control', { 'is-invalid': submitted && $v.user.firstName.$error }]"
-                  type="text"
-                  v-model="user.firstName"
-                  id="firstName"
-                  name="firstName"
-                />
-                <div v-if="submitted && !$v.user.firstName.required" class="invalid-feedback">{{ $t('contact.nameRequired') }}</div>
-              </div>
-
-              <div class="form-group">
-                <label for="lastName">{{ $t('contact.familyName') }}</label>
-                <input
-                  :class="['form-control' ,{ 'is-invalid': submitted && $v.user.lastName.$error }]"
-                  type="text"
-                  v-model="user.lastName"
-                  id="lastName"
-                  name="lastName"
-                />
-                <div v-if="submitted && !$v.user.lastName.required" class="invalid-feedback">{{ $t('contact.surnameRequired') }}</div>
-              </div>
-
-              <div class="form-group">
-                <label for="telephone">{{ $t('contact.Telephone') }}</label>
-                <input
-                  type="number"
-                  v-model="user.telephone"
-                  id="telephone"
-                  name="telephone"
-                  :class="['form-control' ,{ 'is-invalid': submitted && $v.user.telephone.$error }]"
-                />
-                <div v-if="submitted && $v.user.telephone.$error" class="invalid-feedback">
-                  <span v-if="!$v.user.telephone.onlyCzechTel">{{ $t('contact.invalidTelephone') }}</span>
-                  <span v-if="!$v.user.telephone.required">{{ $t('contact.telephoneRequired') }}</span>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  v-model="user.email"
-                  id="email"
-                  name="email"
-                  :class="['form-control' ,{ 'is-invalid': submitted && $v.user.email.$error }]"
-                />
-                <div v-if="submitted && $v.user.email.$error" class="invalid-feedback">
-                  <span v-if="!$v.user.email.required">{{ $t('contact.emailRequired') }}</span>
-                  <span v-if="!$v.user.email.email">{{ $t('contact.invalidEmail') }}</span>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="serviceType">{{ $t('contact.serviceType') }}</label>
-                <select
-                  type="select"
-                  v-model="user.serviceType"
-                  id="serviceType"
-                  name="serviceType"
-                  :class="['form-control' ,{ 'is-invalid': submitted && $v.user.serviceType.$error }]">
-                  <option v-for="(option, i) in options" :key="i" :value="option.type">
-                    {{option.type}}
-                  </option>
-                </select>
-                <div v-if="submitted && $v.user.serviceType.$error" class="invalid-feedback">
-                  <span v-if="!$v.user.serviceType.required">{{ $t('contact.serviceRequired') }}</span>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="message">{{ $t('contact.Message') }}</label>
-                <textarea
-                  v-model="user.message"
-                  id="message"
-                  name="message"
-                  :class="['form-control',{ 'is-invalid': submitted && $v.user.message.$error }]"
-                  rows="3"
-                />
-                <div v-if="submitted && !$v.user.message.required" class="invalid-feedback">{{ $t('contact.messageRequired') }}</div>
-              </div>
-
-              <div class="form-group">
-                <button class="btn btn-primary">{{ $t('contact.Send') }}</button>
-              </div>
-            </form>
+  <b-card
+    tag="form"
+    :title="$t('contact.sendMeMessage')"
+    style="max-width: 30rem;"
+    class="mb-2"
+  >
+    <b-card-text>
+        <form ref="form" @submit.prevent="handleSubmit">
+          <div class="form-group">
+            <label for="name">{{ $t('contact.name') }}*</label>
+            <input
+              :class="['form-control', { 'is-invalid': submitted && $v.user.name.$error }]"
+              type="text"
+              v-model="user.name"
+              id="name"
+              name="name"
+            />
+            <div v-if="submitted && !$v.user.name.required" class="invalid-feedback">{{ $t('contact.nameRequired') }}</div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
+
+          <div class="form-group">
+            <label for="telephone">{{ $t('contact.Telephone') }}</label>
+            <input
+              type="number"
+              v-model="user.telephone"
+              id="telephone"
+              name="telephone"
+              :class="['form-control' ,{ 'is-invalid': submitted && $v.user.telephone.$error }]"
+            />
+            <div v-if="submitted && $v.user.telephone.$error" class="invalid-feedback">
+              <span v-if="!$v.user.telephone.onlyCzechTel">{{ $t('contact.invalidTelephone') }}</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input
+              type="email"
+              v-model="user.email"
+              id="email"
+              name="email"
+              :class="['form-control' ,{ 'is-invalid': submitted && $v.user.email.$error }]"
+            />
+            <div v-if="submitted && $v.user.email.$error" class="invalid-feedback">
+              <span v-if="!$v.user.email.required">{{ $t('contact.emailRequired') }}</span>
+              <span v-if="!$v.user.email.email">{{ $t('contact.invalidEmail') }}</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">{{ $t('contact.Message') }}*</label>
+            <textarea
+              v-model="user.message"
+              id="message"
+              name="message"
+              :class="['form-control',{ 'is-invalid': submitted && $v.user.message.$error }]"
+              rows="3"
+            />
+            <div v-if="submitted && !$v.user.message.required" class="invalid-feedback">{{ $t('contact.messageRequired') }}</div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-success">{{ $t('contact.Send') }}</button>
+          </div>
+        </form>
+    </b-card-text>
+  </b-card>
+  </template>
 
 <script>
 import emailjs from '@emailjs/browser'
@@ -110,10 +77,8 @@ export default {
   data () {
     return {
       user: {
-        firstName: '',
-        lastName: '',
+        name: '',
         email: '',
-        serviceType: '',
         telephone: '',
         message: ''
       },
@@ -130,11 +95,9 @@ export default {
   },
   validations: {
     user: {
-      firstName: { required },
-      lastName: { required },
+      name: { required },
       email: { required, email },
-      serviceType: { required },
-      telephone: { onlyCzechTel, required },
+      telephone: { onlyCzechTel },
       message: { required }
     }
   },
@@ -160,3 +123,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.jumbotron {
+  background-color: white;
+}
+</style>

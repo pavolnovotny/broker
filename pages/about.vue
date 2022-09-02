@@ -1,13 +1,13 @@
 <template>
-  <section>
+  <section class="mb-5">
     <b-container fluid class="header">
-      <h1>{{$t('about.AboutMe')}}</h1>
+      <h1 class="ml-5">{{$t('about.AboutMe')}}</h1>
     </b-container>
     <b-container>
       <main>
         <b-row>
           <b-col md="4" class="foto">
-            <b-img thumbnail src="@/static/images/stramak.png" fluid alt="Responsive image"></b-img>
+            <b-img thumbnail src="~/static/images/about-page.jpg" fluid alt="Responsive image"></b-img>
           </b-col>
           <b-col align-v="center" align-h="center" md="8">
             <div>
@@ -15,23 +15,23 @@
               <p>{{ $t('about.text1') }}</p>
               <p>{{ $t('about.text2') }}</p>
               <p>{{ $t('about.text3') }}</p>
-              <b-button class="cta"><nuxt-link :to="localePath('contact')">{{ $t('pages.contact') }}</nuxt-link></b-button>
+              <b-button class="cta" variant="success"><nuxt-link :to="localePath('contact')">{{ $t('pages.contact') }}</nuxt-link></b-button>
             </div>
           </b-col>
         </b-row>
       </main>
     </b-container>
-    <b-container fluid>
-      <b-row>
-        <b-embed
-          class="map mb-0"
-          type="iframe"
-          aspect="16by9"
-          src="https://www.google.com.qa/maps/d/embed?mid=1-9mYKUGgMjBXZt_KO6SHHOfZ6dvNX3c&ehbc=2E312F"
-          allowfullscreen
-        ></b-embed>
-      </b-row>
-    </b-container>
+<!--    <b-container fluid>-->
+<!--      <b-row>-->
+<!--        <b-embed-->
+<!--          class="map mb-0"-->
+<!--          type="iframe"-->
+<!--          aspect="16by9"-->
+<!--          src="https://www.google.com.qa/maps/d/embed?mid=1-9mYKUGgMjBXZt_KO6SHHOfZ6dvNX3c&ehbc=2E312F"-->
+<!--          allowfullscreen-->
+<!--        ></b-embed>-->
+<!--      </b-row>-->
+<!--    </b-container>-->
   </section>
 </template>
 
@@ -57,15 +57,14 @@ export default {
   margin-bottom: 0px;
 }
 .header {
-  background: #DEF2F1;
+  background: #f3f5f1;
+  margin-right: 15px;
   padding: 15px;
-  text-align: center;
   margin-bottom: 15px;
 }
 
-.cta {
-  background-color: #3AAFA9;
-  color: #FEFFFF;
+.cta a {
+  color: #FEFFFF;text-decoration: none;
 }
 
 main {

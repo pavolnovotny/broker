@@ -11,7 +11,7 @@
         </div>
       </b-col>
       <b-col md="6">
-        <b-img src="~/static/images/new.png" fluid alt="Michal Smiga photo"></b-img>
+        <b-img src="~/static/images/hero.png" fluid alt="Michal Smiga photo"></b-img>
       </b-col>
     </b-row>
   </b-container>
