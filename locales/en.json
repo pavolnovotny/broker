@@ -4,6 +4,11 @@
     "about": "about",
     "contact": "contact"
   },
+  "lang": {
+    "sk": "Slovak",
+    "cz": "Czech",
+    "en": "English"
+  },
   "nav": {
     "home": "HOME",
     "about": "ABOUT ME",

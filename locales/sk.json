@@ -4,6 +4,11 @@
     "about": "o-mne",
     "contact": "kontakt"
   },
+  "lang": {
+    "sk": "Slovensky",
+    "cz": "Česky",
+    "en": "Anglicky"
+  },
   "nav": {
     "home": "DOMOV",
     "about": "O MNE",

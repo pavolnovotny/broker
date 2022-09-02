@@ -3,7 +3,7 @@
       <b-navbar-brand>
         <nuxt-link :to="localePath('/')"><img src="~/static/images/logo.svg" alt="logo"/></nuxt-link>
       </b-navbar-brand>
-      <LangugageInput/>
+
       <div class="mb-2">
       </div>
 
@@ -27,18 +27,20 @@
           <ul class="flex-row position-relative d-md-none d-lg-flex align-items-center">
             <li class="d-inline-block mr-3 position-relative"><BIconTelephone class="icon"/><span class="ml-4">725 747 519</span></li>
             <li class="d-inline-block mr-3 position-relative"><BIconEnvelope class="icon"/><span class="ml-4">michal.smiga@kwcz.cz</span></li>
-            <li class="d-inline-block">
+            <li class="d-inline-block mr-3">
               <b-button class="cta" variant="success">
                 <nuxt-link :to="localePath('contact')">{{ $t('banner.form') }}</nuxt-link>
               </b-button>
             </li>
+            <li class="d-inline-block mr-3 position-relative"><LangugageInput/></li>
           </ul>
-          <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item href="#">EN</b-dropdown-item>
-            <b-dropdown-item href="#">ES</b-dropdown-item>
-            <b-dropdown-item href="#">RU</b-dropdown-item>
-            <b-dropdown-item href="#">FA</b-dropdown-item>
-          </b-nav-item-dropdown>
+
+<!--          <b-nav-item-dropdown text="Lang" right>-->
+<!--            <b-dropdown-item href="#">EN</b-dropdown-item>-->
+<!--            <b-dropdown-item href="#">ES</b-dropdown-item>-->
+<!--            <b-dropdown-item href="#">RU</b-dropdown-item>-->
+<!--            <b-dropdown-item href="#">FA</b-dropdown-item>-->
+<!--          </b-nav-item-dropdown>-->
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

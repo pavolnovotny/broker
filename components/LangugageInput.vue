@@ -1,11 +1,9 @@
 <template>
   <div>
     <select v-model="selectedValue" @change="onChange(selectedValue)">
-      <option
-        v-for="(locale, index) in $i18n.locales"
-        :key="index"
-        :value="locale.code"
-      >{{locale.name}}</option>
+      <option value="cz">🇨🇿 {{$t('lang.cz')}}</option>
+      <option value="sk">🇸🇰 {{$t('lang.sk')}}</option>
+      <option value="en">🇺🇸󠁢󠁥󠁮 {{$t('lang.en')}}</option>
     </select>
   </div>
 </template>
@@ -27,3 +25,9 @@ export default {
   }
 }
 </script>
+
+<style>
+select {
+  padding: 7px;
+}
+</style>
