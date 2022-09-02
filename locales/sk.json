@@ -4,6 +4,11 @@
     "about": "o-mne",
     "contact": "kontakt"
   },
+  "nav": {
+    "home": "DOMOV",
+    "about": "O MNE",
+    "contact": "KONTAKT"
+  },
   "message": "Bonjour",
   "cookies": {
     "text": "Prevádzkovateľ tohto webu používa cookies na zabezpečenie funkčnosti tohto webu a s vaším súhlasom aj pre lepšiu používateľskú skúsenosť a analýzu návštevnosti a spôsobu používania webu.",
@@ -12,7 +17,8 @@
   "offered services": "Are you interested in the offered services?",
   "banner": {
     "text": "Váš certifikovaný realitný maklér patriaci pod najväčšiu realitnú kanceláriu na svete Keller Williams. Vašu nehnuteľnosť viem predať/prenajať rýchlo a za maximálnu cenu.",
-    "myService": "Moje služby"
+    "myService": "Moje služby",
+    "form": "Formulár"
   },
   "services": {
     "Services": "Služby",

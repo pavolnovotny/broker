@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     OH NO!!!!!!!!!!
   </div>
 </template>

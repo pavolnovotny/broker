@@ -1,7 +1,7 @@
 <template>
     <b-navbar sticky toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="/">
-        <img src="~/static/images/logo.svg" alt="logo"/>
+      <b-navbar-brand>
+        <nuxt-link :to="localePath('/')"><img src="~/static/images/logo.svg" alt="logo"/></nuxt-link>
       </b-navbar-brand>
       <LangugageInput/>
       <div class="mb-2">
@@ -12,22 +12,26 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item>
-            <nuxt-link :to="localePath('/')">{{ $t('pages.home') }}</nuxt-link>
+            <nuxt-link :to="localePath('/')">{{ $t('nav.home') }}</nuxt-link>
           </b-nav-item>
           <b-nav-item>
-            <nuxt-link :to="localePath('about')">{{ $t('pages.about') }}</nuxt-link>
+            <nuxt-link :to="localePath('about')">{{ $t('nav.about') }}</nuxt-link>
           </b-nav-item>
           <b-nav-item>
-            <nuxt-link :to="localePath('contact')">{{ $t('pages.contact') }}</nuxt-link>
+            <nuxt-link :to="localePath('contact')">{{ $t('nav.contact') }}</nuxt-link>
           </b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <ul class="flex-row position-relative d-md-none d-lg-flex ">
-            <li class="d-inline-block mt-1 mb-1"><BIconTelephone class="icon"/><span>725 747 519</span></li>
-            <li class="d-inline-block"><BIconEnvelope class="icon"/><span>michal.smiga@kwcz.cz</span></li>
-            <li class="d-inline-block"><b-button variant="success">{{ $t('banner.myService') }}</b-button></li>
+          <ul class="flex-row position-relative d-md-none d-lg-flex align-items-center">
+            <li class="d-inline-block mr-3 position-relative"><BIconTelephone class="icon"/><span class="ml-4">725 747 519</span></li>
+            <li class="d-inline-block mr-3 position-relative"><BIconEnvelope class="icon"/><span class="ml-4">michal.smiga@kwcz.cz</span></li>
+            <li class="d-inline-block">
+              <b-button class="cta" variant="success">
+                <nuxt-link :to="localePath('contact')">{{ $t('banner.form') }}</nuxt-link>
+              </b-button>
+            </li>
           </ul>
           <b-nav-item-dropdown text="Lang" right>
             <b-dropdown-item href="#">EN</b-dropdown-item>
@@ -79,10 +83,11 @@ export default {
 }
 
 .icon {
-  margin-right: 8px;
+  position: absolute;
+  top: 2px;
+  left: 0;
   width: 20px;
   height: 20px;
-  font-weight: 900;
   color: #5ea51d;
 }
 </style>

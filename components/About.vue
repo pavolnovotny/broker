@@ -30,11 +30,6 @@ export default {
   padding: 0 20px 20px 0;
 }
 
-.cta a {
-  text-decoration: none;
-  color: #fff;
-}
-
 .header {
   background: #DEF2F1;
   padding: 15px;

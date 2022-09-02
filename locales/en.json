@@ -4,6 +4,11 @@
     "about": "about",
     "contact": "contact"
   },
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT ME",
+    "contact": "CONTACT"
+  },
   "message": "Bonjour",
   "cookies": {
     "text": "The operator of this website uses cookies to ensure the functionality of this website and, with your consent, also for a better user experience and to analyze traffic and the way the website is used.",
@@ -12,7 +17,8 @@
   "offered services": "Are you interested in the offered services?",
   "banner": {
     "text": "Your certified real estate agent under the largest real estate agency in the world, Keller Williams. I can sell/rent your property quickly and for the maximum price.",
-    "myService": "My services"
+    "myService": "My services",
+    "form": "Form"
   },
   "services": {
     "Services": "Services",
