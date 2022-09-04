@@ -5,8 +5,8 @@
     </b-container>
     <b-container>
       <b-row class="mb-5">
-        <b-col xl="6"><ContactForm/></b-col>
-        <b-col xl="6"><ContactCard/></b-col>
+        <b-col md="6" xl="6"><ContactForm/></b-col>
+        <b-col md="6" xl="6"><ContactCard/></b-col>
       </b-row>
     </b-container>
     <b-container fluid>

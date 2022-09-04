@@ -1,9 +1,9 @@
 <template>
   <footer>
     <cookie-law class="cookies">
-      <div slot-scope="props" class="d-flex align-content-between">
+      <div slot-scope="props" class="d-flex align-content-between justify-content-center">
         <p>{{$t('cookies.text')}}</p>
-        <b-button class="d-inline-block" variant="success" @click="props.accept">{{$t('cookies.btn')}}</b-button>
+        <b-button class="ml-2 align-self-center" variant="success" @click="props.accept">{{$t('cookies.btn')}}</b-button>
       </div>
     </cookie-law>
     <b-container>
@@ -102,6 +102,11 @@ footer {
 .footer-bottom {
   background-color: #050d21;
   padding: 10px;
+}
+
+.Cookie--base {
+  padding: 10px;
+  border-top: 1px solid #050d21;
 }
 
 .cookies {
