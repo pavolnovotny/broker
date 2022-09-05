@@ -2,7 +2,9 @@
   "pages": {
     "home": "domu",
     "about": "o-mne",
-    "contact": "kontakt"
+    "contact": "kontakt",
+    "blogs": "clanky",
+    "propertyOffers": "nabidka-nemovitosti"
   },
   "lang": {
     "sk": "Slovensky",
@@ -12,7 +14,9 @@
   "nav": {
     "home": "DOMŮ",
     "about": "O MNĚ",
-    "contact": "KONTAKT"
+    "contact": "KONTAKT",
+    "blogs": "ČLÁNKY",
+    "propertyOffers": "NABÍDKA NEMOVITOSTÍ"
   },
   "message": "cc",
   "cookies": {

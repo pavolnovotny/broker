@@ -2,7 +2,9 @@
   "pages": {
     "home": "home",
     "about": "about",
-    "contact": "contact"
+    "contact": "contact",
+    "blogs": "blogs",
+    "propertyOffers": "property-offers"
   },
   "lang": {
     "sk": "Slovak",
@@ -12,7 +14,9 @@
   "nav": {
     "home": "HOME",
     "about": "ABOUT ME",
-    "contact": "CONTACT"
+    "contact": "CONTACT",
+    "blogs": "BLOGS",
+    "propertyOffers": "PROPERTY OFFERS"
   },
   "message": "Bonjour",
   "cookies": {

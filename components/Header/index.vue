@@ -20,6 +20,12 @@
           <b-nav-item>
             <nuxt-link :to="localePath('contact')" tag="li"><a>{{ $t('nav.contact') }}</a></nuxt-link>
           </b-nav-item>
+          <b-nav-item>
+            <nuxt-link :to="localePath('blogs')" tag="li"><a>{{ $t('nav.blogs') }}</a></nuxt-link>
+          </b-nav-item>
+          <b-nav-item>
+            <nuxt-link :to="localePath('property-offers')" tag="li"><a>{{ $t('nav.propertyOffers') }}</a></nuxt-link>
+          </b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->

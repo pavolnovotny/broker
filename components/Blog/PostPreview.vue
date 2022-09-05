@@ -2,7 +2,7 @@
   <div class="preview">
     <nuxt-link
       :key="id"
-      :to="id"
+      :to="`/blogs/${id}`"
     >
       <article>
         <div class="thumbnail" :style="{backgroundImage: 'url(' + thumbnailImage+')'}"></div>
