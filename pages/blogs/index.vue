@@ -1,13 +1,21 @@
 <template>
   <section>
-    <PostPreview
-      v-for="post in posts"
-      :key="post.id"
-      :title="post.title"
-      :excerpt="post.previewText"
-      :thumbnail-image="post.thumbnailUrl"
-      :id="post.id"
-    />
+    <b-container fluid class="header-section">
+      <h1 class="ml-5">{{$t('Blogs')}}</h1>
+    </b-container>
+    <b-container>
+      <b-row>
+        <PostPreview
+          v-for="post in posts"
+          :key="post.id"
+          :title="post.title"
+          :excerpt="post.previewText"
+          :thumbnail-image="post.thumbnailUrl"
+          :id="post.id"
+          class="col-xl-6"
+        />
+      </b-row>
+    </b-container>
   </section>
 </template>
 

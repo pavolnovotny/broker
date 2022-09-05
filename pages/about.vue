@@ -1,6 +1,6 @@
 <template>
   <section class="mb-5">
-    <b-container fluid class="header">
+    <b-container fluid class="header-section">
       <h1 class="ml-5">{{$t('about.AboutMe')}}</h1>
     </b-container>
     <b-container>
@@ -55,12 +55,6 @@ export default {
 .map {
   max-height: 350px;
   margin-bottom: 0px;
-}
-.header {
-  background: #f3f5f1;
-  margin-right: 15px;
-  padding: 15px;
-  margin-bottom: 15px;
 }
 
 .cta a {

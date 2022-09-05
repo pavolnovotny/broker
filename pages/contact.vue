@@ -1,6 +1,6 @@
 <template>
   <section>
-    <b-container fluid class="header">
+    <b-container fluid class="header-section">
       <h1 class="ml-5">{{$t('contact.Contact')}}</h1>
     </b-container>
     <b-container>
@@ -45,11 +45,5 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  background: #f3f5f1;
-  margin-right: 15px;
-  padding: 15px;
-  margin-bottom: 30px;
-}
 
 </style>
