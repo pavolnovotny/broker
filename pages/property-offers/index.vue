@@ -5,12 +5,28 @@
     </b-container>
     <b-container>
       <b-row>
-        <PostPreview
+        id: prop.slug,
+        title: prop.content.title,
+        price: prop.content.price,
+        disposition: prop.content.disposition,
+        isReady: prop.content.isReady,
+        usableArea: prop.content.usableArea,
+        images: prop.content.images,
+        heroImage: prop.content.heroImage,
+        street: prop.content.street,
+        city: prop.content.city,
+        keyParameters: prop.content.keyParameters,
+        isOnSale: prop.content.isOnSale
+        <Preview
           v-for="property in properties"
           :key="property.id"
           :title="property.title"
-          :excerpt="property.previewText"
-          :thumbnail-image="property.thumbnailUrl"
+          :heroImage="property.heroImage"
+          :price="property.price"
+          :isReady="property.isReady"
+          :street="property.street"
+          :city="property.city"
+          :isOnSale="property.isOnSale"
           :id="property.id"
           class="col-xl-6"
         />
@@ -20,7 +36,7 @@
 </template>
 
 <script>
-import PostPreview from '../../components/Blog/PostPreview'
+import Preview from '../../components/Property/Preview'
 export default {
   name: 'posts-index',
   nuxtI18n: {
@@ -31,7 +47,7 @@ export default {
     }
   },
   components: {
-    PostPreview
+    Preview
   },
   asyncData (context) {
     return context.app.$storyapi

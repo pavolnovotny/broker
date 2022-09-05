@@ -12,18 +12,6 @@
       </b-card>
     </nuxt-link>
   </div>
-<!--  <div class="preview">-->
-<!--    <nuxt-link-->
-<!--      :key="id"-->
-<!--      :to="`/blogs/${id}`"-->
-<!--    >-->
-<!--      <article>-->
-<!--        <div class="thumbnail" :style="{backgroundImage: 'url(' + thumbnailImage+')'}"></div>-->
-<!--        <div>{{title}}</div>-->
-<!--        <p>{{excerpt}}</p>-->
-<!--      </article>-->
-<!--    </nuxt-link>-->
-<!--  </div>-->
 </template>
 
 <script>

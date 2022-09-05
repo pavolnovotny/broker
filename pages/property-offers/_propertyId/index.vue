@@ -1,13 +1,51 @@
 <template>
-<div>PROPERTY ID</div>
+  <b-container>
+    <section id="post" v-editable="blok">
+      <div class="thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
+      <h1>{{title}}</h1>
+      <p>{{content}}</p>
+    </section>
+  </b-container>
 </template>
 
 <script>
 export default {
-  name: 'propertyId-index'
+  name: 'propertyId-index',
+  asyncData (context) {
+    return context.app.$storyapi.get('cdn/stories/property-offers/' + context.params.propertyId, {
+      version: 'draft'
+    }).then((res) => {
+      console.log(res.data.story)
+      return {
+        blok: res.data.story.content,
+        content: res.data.story.content.content,
+        price: res.data.story.content.price,
+        disposition: res.data.story.content.disposition,
+        isReady: res.data.story.content.isReady,
+        usableArea: res.data.story.content.usableArea,
+        images: res.data.story.content.images,
+        street: res.data.story.content.street,
+        city: res.data.story.content.city,
+        keyParameters: res.data.story.content.keyParameters,
+        isOnSale: res.data.story.content.isOnSale,
+        description: res.data.story.content.description
+      }
+    })
+  }
+  // mounted () {
+  //   this.$storyblok.init()
+  //   this.$storyblok.on('change', () => {
+  //     location.reload(true)
+  //   })
+  // }
 }
 </script>
 
 <style scoped>
-
+.thumbnail {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
 </style>

@@ -1,6 +1,16 @@
 <template>
-  <div>
-    {{title}}
+  <div class="wrapper">
+    <nuxt-link
+      :key="id"
+      :to="`/property-offers/${id}`"
+    >
+      <b-card :title="title" :img-src="heroImage" :img-alt="title" img-top>
+        <b-card-text>
+          {{price}}
+        </b-card-text>
+        <b-card-text class="small text-muted">Last updated 3 mins ago</b-card-text>
+      </b-card>
+    </nuxt-link>
   </div>
 </template>
 
