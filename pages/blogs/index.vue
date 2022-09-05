@@ -23,6 +23,13 @@
 import PostPreview from '../../components/Blog/PostPreview'
 export default {
   name: 'posts-index',
+  nuxtI18n: {
+    paths: {
+      cz: '/clanky',
+      sk: '/clanky',
+      en: '/blogs'
+    }
+  },
   components: {
     PostPreview
   },
@@ -50,24 +57,6 @@ export default {
       posts: []
     }
   }
-  // data () {
-  //   return {
-  //     posts: [
-  //       {
-  //         title: 'A new beginning',
-  //         previewText: 'This will be awesome',
-  //         thumbnailUrl: 'https://picsum.photos/1024/400/?image=41',
-  //         id: 'a-new-beginning'
-  //       },
-  //       {
-  //         title: 'A second beginning',
-  //         previewText: 'This second will be awesome',
-  //         thumbnailUrl: 'https://picsum.photos/1024/400/?image=41',
-  //         id: 'a-second-beginning'
-  //       }
-  //     ]
-  //   }
-  // }
 }
 </script>
 
