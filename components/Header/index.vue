@@ -12,13 +12,13 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item>
-            <nuxt-link :to="localePath('/')">{{ $t('nav.home') }}</nuxt-link>
+            <nuxt-link :to="localePath('/')" tag="li"><a>{{ $t('nav.home') }}</a></nuxt-link>
           </b-nav-item>
           <b-nav-item>
-            <nuxt-link :to="localePath('about')">{{ $t('nav.about') }}</nuxt-link>
+            <nuxt-link :to="localePath('about')" tag="li"><a>{{ $t('nav.about') }}</a></nuxt-link>
           </b-nav-item>
           <b-nav-item>
-            <nuxt-link :to="localePath('contact')">{{ $t('nav.contact') }}</nuxt-link>
+            <nuxt-link :to="localePath('contact')" tag="li"><a>{{ $t('nav.contact') }}</a></nuxt-link>
           </b-nav-item>
         </b-navbar-nav>
 
@@ -61,8 +61,14 @@ export default {
   text-decoration: none;
 }
 
-.nav-link a:hover {
+.nav-link a:hover,
+.nav-link a:active,
+.nav-link .nuxt-link-exact-active a {
   color: #5ea51d !important;
+}
+
+.nav-link .nuxt-link-exact-active {
+  border-bottom: 2px solid #5ea51d;
 }
 
 .navbar-brand {

@@ -61,8 +61,11 @@
           </div>
 
           <div class="form-group">
-            <button class="btn btn-success">{{ $t('contact.Send') }}</button>
+            <button v-b-modal.modal-1 class="btn btn-success">{{ $t('contact.Send') }}</button>
           </div>
+          <b-modal id="modal-1" title="BootstrapVue">
+            <p class="my-4">Hello from modal!</p>
+          </b-modal>
         </form>
     </b-card-text>
   </b-card>

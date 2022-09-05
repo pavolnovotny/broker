@@ -81,7 +81,7 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    ['storyblok-nuxt', {accessToken: 'QLa9drCU8R4C8kNmnOg06Qtt', cacheProvider: 'memory'}],
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
