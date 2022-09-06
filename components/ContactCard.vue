@@ -15,7 +15,9 @@
         </ul>
 
         <h4>Uložte si můj kontakt:</h4>
-        <b-img class="text-center d-inline-block" src="~/static/images/contact-qr.png" fluid alt="Responsive image"></b-img>
+        <div class="text-center">
+          <img class="d-inline-block" src="~/static/images/contact-qr.png" alt="contact">
+        </div>
       </b-card-text>
     </b-card>
   </div>

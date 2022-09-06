@@ -30,8 +30,8 @@
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="flex-row position-relative d-lg-flex  align-items-center ml-auto">
-          <li class="d-inline-block mr-3 position-relative hide"><a href="tel:725747519"><BIconTelephone class="icon"/></a><span class="ml-4">725 747 519</span></li>
-          <li class="d-inline-block mr-3 position-relative hide"><a href="mailto:michal.smiga@kwcz.cz"><BIconEnvelope class="icon"/></a><span class="ml-4">michal.smiga@kwcz.cz</span></li>
+          <li class=" mr-3 position-relative hide"><a href="tel:725747519"><BIconTelephone class="icon"/></a><span class="ml-4">725 747 519</span></li>
+          <li class=" mr-3 position-relative  hide"><a href="mailto:michal.smiga@kwcz.cz"><BIconEnvelope class="icon"/></a><span class="ml-4">michal.smiga@kwcz.cz</span></li>
           <li class="d-inline-block mr-3">
             <b-button class="cta" variant="success">
               <nuxt-link :to="localePath('contact')">{{ $t('banner.form') }}</nuxt-link>
@@ -97,11 +97,14 @@ export default {
 }
 
 @media (max-width: 992px) {
-  .hide {
-    display: none!important;
-  }
   .navbar-brand img {
     width: 100px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .hide {
+    display: none;
   }
 }
 </style>

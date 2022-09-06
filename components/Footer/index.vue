@@ -7,7 +7,7 @@
       </div>
     </cookie-law>
     <b-container>
-      <b-row>
+      <b-row class="justify-content-center">
         <ul class="d-flex align-items-center justify-content-center mt-4">
           <li class="d-inline-block">
             <a href="https://www.facebook.com/smiga.michal" target="_blank"><BIconFacebook class="facebook"/></a>
@@ -20,7 +20,7 @@
           </li>
         </ul>
       </b-row>
-      <b-row>
+      <b-row class="justify-content-center">
         <div class="d-flex align-items-center justify-content-center mt-2">
           <img class="logo" src="~/static/images/logo.svg"/>
           <ul class="d-flex flex-column position-relative">
@@ -35,7 +35,7 @@
       </b-row>
     </b-container>
     <b-container fluid class="footer-bottom">
-      <b-row>
+      <b-row class="justify-content-center">
         <p class="text-center"> &copy; <span>{{new Date().getFullYear()}}</span> {{ $t('footer') }} </p>
       </b-row>
     </b-container>
@@ -45,7 +45,7 @@
 <script>
 import { BIconFacebook, BIconInstagram, BIconLinkedin, BIconGeoAlt, BIconTelephone, BIconEnvelope } from 'bootstrap-vue'
 export default {
-  name: 'footer-bottom',
+  name: 'footer-index',
   components: {
     BIconFacebook,
     BIconInstagram,
