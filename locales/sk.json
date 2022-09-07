@@ -24,6 +24,18 @@
     "text": "Prevádzkovateľ tohto webu používa cookies na zabezpečenie funkčnosti tohto webu a s vaším súhlasom aj pre lepšiu používateľskú skúsenosť a analýzu návštevnosti a spôsobu používania webu.",
     "btn": "Suhlasím"
   },
+  "propertyOffers": {
+    "header": "Ponuka nehnuteľností",
+    "onSale": "Na predaj",
+    "onRent": "Na prenájom",
+    "city": "Mesto",
+    "street": "Ulica",
+    "added": "Pridané",
+    "disposition": "Dispozícia",
+    "area": "Užitná plocha",
+    "isReady": "Pripravené",
+    "isNotReady": "Pripravujeme"
+  },
   "offered services": "Máte záujem o ponúkané služby?",
   "banner": {
     "text": "Váš certifikovaný realitný maklér patriaci pod najväčšiu realitnú kanceláriu na svete Keller Williams. Vašu nehnuteľnosť viem predať/prenajať rýchlo a za maximálnu cenu.",

@@ -4,11 +4,22 @@
       :key="id"
       :to="`/property-offers/${id}`"
     >
-      <b-card :title="title" :img-src="heroImage" :img-alt="title" img-top>
+      <b-card :title="title" :img-src="heroImage" :img-alt="title" img-top class="position-relative">
+        <div class="sale-label"><h4>{{onSaleText}}</h4></div>
+        <div class="ready-label"><h4>{{isReadyText}}</h4></div>
         <b-card-text>
-          {{price}}
+          <div><span>{{price}}</span></div>
+          <div>
+            <div><span>{{$t('propertyOffers.city')}}:</span><span>{{city}}</span></div>
+            <div><span>{{$t('propertyOffers.street')}}:</span><span>{{street}}</span></div>
+          </div>
+          <div>
+            <div><span>{{$t('propertyOffers.disposition')}}:</span><span>{{disposition}}</span></div>
+            <div><span>{{$t('propertyOffers.usableArea')}}:</span><span>{{usableArea}}</span></div>
+            <div><span>{{$t('propertyOffers.added')}}:</span><span>25.6.2022</span></div>
+            <button class="btn btn-success">DETAIL</button>
+          </div>
         </b-card-text>
-        <b-card-text class="small text-muted">Last updated 3 mins ago</b-card-text>
       </b-card>
     </nuxt-link>
   </div>
@@ -58,10 +69,40 @@ export default {
       type: Boolean,
       required: true
     }
+  },
+  computed: {
+    onSaleText () {
+      return this.isOnSale ? this.$t('propertyOffers.onSale') : this.$t('propertyOffers.onRent')
+    },
+    isReadyText () {
+      return this.isReady ? this.$t('propertyOffers.isReady') : this.$t('propertyOffers.isNotReady')
+    }
   }
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.card {
+  max-width: 350px;
+}
+.sale-label {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background-color: red;
+  padding: 2px 5px 2px 5px;
+  h4 {
+    margin-bottom: 0;
+  }
+}
+.ready-label {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  background-color: blue;
+  padding: 2px 5px 2px 5px;
+  h4 {
+    margin-bottom: 0;
+  }
+}
 </style>

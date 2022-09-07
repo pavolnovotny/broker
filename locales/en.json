@@ -24,6 +24,18 @@
     "text": "The operator of this website uses cookies to ensure the functionality of this website and, with your consent, also for a better user experience and to analyze traffic and the way the website is used.",
     "btn": "Agree"
   },
+  "propertyOffers": {
+    "header": "Property offers",
+    "onSale": "On Sale",
+    "onRent": "On Rent",
+    "city": "City",
+    "street": "Street",
+    "added": "Added",
+    "disposition": "Disposition",
+    "area": "Area",
+    "isReady": "Ready",
+    "isNotReady": "We are preparing"
+  },
   "offered services": "Are you interested in the offered services?",
   "banner": {
     "text": "Your certified real estate agent under the largest real estate agency in the world, Keller Williams. I can sell/rent your property quickly and for the maximum price.",

@@ -1,22 +1,10 @@
 <template>
   <section>
     <b-container fluid class="header-section">
-      <h1 class="ml-5">{{$t('Blogs')}}</h1>
+      <h1 class="ml-5">{{$t('propertyOffers.header')}}</h1>
     </b-container>
     <b-container>
       <b-row>
-        id: prop.slug,
-        title: prop.content.title,
-        price: prop.content.price,
-        disposition: prop.content.disposition,
-        isReady: prop.content.isReady,
-        usableArea: prop.content.usableArea,
-        images: prop.content.images,
-        heroImage: prop.content.heroImage,
-        street: prop.content.street,
-        city: prop.content.city,
-        keyParameters: prop.content.keyParameters,
-        isOnSale: prop.content.isOnSale
         <Preview
           v-for="property in properties"
           :key="property.id"
@@ -28,7 +16,9 @@
           :city="property.city"
           :isOnSale="property.isOnSale"
           :id="property.id"
-          class="col-xl-6"
+          :disposition="property.disposition"
+          :usable-area="property.usableArea"
+          class="col-xl-6 mt-2 mb-4"
         />
       </b-row>
     </b-container>

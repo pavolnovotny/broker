@@ -1,21 +1,22 @@
 <template>
   <b-container>
-    <section id="post" v-editable="blok">
-      <div class="thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
-      <h1>{{title}}</h1>
-      <p>{{content}}</p>
-    </section>
+    <Carousel/>
+    <p>{{ description }}</p>
   </b-container>
 </template>
 
 <script>
+import Carousel from '../../../components/shared/Carousel'
 export default {
   name: 'propertyId-index',
+  components: {
+    Carousel
+  },
   asyncData (context) {
     return context.app.$storyapi.get('cdn/stories/property-offers/' + context.params.propertyId, {
       version: 'draft'
     }).then((res) => {
-      console.log(res.data.story)
+      // console.log(res.data.story.content.images)
       return {
         blok: res.data.story.content,
         content: res.data.story.content.content,
