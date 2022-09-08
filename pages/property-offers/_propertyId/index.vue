@@ -1,8 +1,13 @@
 <template>
-  <b-container>
-    <Carousel/>
-    <p>{{ description }}</p>
-  </b-container>
+  <section>
+    <b-container fluid class="header-section">
+      <h3 class="text-center">{{title}}</h3>
+    </b-container>
+    <b-container>
+      <Carousel :images="images"/>
+      <p>{{ description }}</p>
+    </b-container>
+  </section>
 </template>
 
 <script>
@@ -16,9 +21,10 @@ export default {
     return context.app.$storyapi.get('cdn/stories/property-offers/' + context.params.propertyId, {
       version: 'draft'
     }).then((res) => {
-      // console.log(res.data.story.content.images)
+      console.log(res.data.story.content)
       return {
         blok: res.data.story.content,
+        title: res.data.story.content.title,
         content: res.data.story.content.content,
         price: res.data.story.content.price,
         disposition: res.data.story.content.disposition,
