@@ -18,6 +18,7 @@
           :id="property.id"
           :disposition="property.disposition"
           :usable-area="property.usableArea"
+          :isReserved="property.isReserved"
           class="col-xl-6 mt-2 mb-4"
         />
       </b-row>
@@ -61,7 +62,8 @@ export default {
               street: prop.content.street,
               city: prop.content.city,
               keyParameters: prop.content.keyParameters,
-              isOnSale: prop.content.isOnSale
+              isOnSale: prop.content.isOnSale,
+              isReserved: prop.content.isReserved
             }
           })
         }

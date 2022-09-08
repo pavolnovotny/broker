@@ -1,22 +1,27 @@
 <template>
-  <div class="wrapper">
+  <div>
     <nuxt-link
       :key="id"
       :to="`/property-offers/${id}`"
+      class="test"
     >
       <b-card :title="title" :img-src="heroImage" :img-alt="title" img-top class="position-relative">
-        <div class="sale-label"><h4>{{onSaleText}}</h4></div>
-        <div class="ready-label"><h4>{{isReadyText}}</h4></div>
-        <b-card-text>
-          <div><span>{{price}}</span></div>
-          <div>
-            <div><span>{{$t('propertyOffers.city')}}:</span><span>{{city}}</span></div>
-            <div><span>{{$t('propertyOffers.street')}}:</span><span>{{street}}</span></div>
+        <div class="wrapper-labels">
+          <div class="label sale-label"><h4>{{onSaleText}}</h4></div>
+          <div class="label ready-label"><h4>{{isReadyText}}</h4></div>
+          <div v-if="isReserved" class="label ready-label"><h4>{{$t('propertyOffers.reserved')}}</h4></div>
+        </div>
+        <b-card-text class="d-flex flex-column">
+          <div class="label__price mb-2">{{price}} Czk</div>
+          <div class="d-flex justify-content-between">
+            <div><span>{{$t('propertyOffers.city')}}: </span><span>{{city}}</span></div>
+            <div><span>{{$t('propertyOffers.street')}}: </span><span>{{street}}</span></div>
           </div>
           <div>
-            <div><span>{{$t('propertyOffers.disposition')}}:</span><span>{{disposition}}</span></div>
-            <div><span>{{$t('propertyOffers.usableArea')}}:</span><span>{{usableArea}}</span></div>
-            <div><span>{{$t('propertyOffers.added')}}:</span><span>25.6.2022</span></div>
+            <div>
+              <div class="mt-2 mb-2"><span>{{$t('propertyOffers.disposition')}}: </span><span>{{disposition}}</span></div>
+              <div class="mb-2"><span>{{$t('propertyOffers.area')}}: </span><span>{{usableArea}}m²</span></div>
+            </div>
             <button class="btn btn-success">DETAIL</button>
           </div>
         </b-card-text>
@@ -68,6 +73,10 @@ export default {
     isOnSale: {
       type: Boolean,
       required: true
+    },
+    isReserved: {
+      type: Boolean,
+      required: true
     }
   },
   computed: {
@@ -85,24 +94,33 @@ export default {
 .card {
   max-width: 350px;
 }
-.sale-label {
+.wrapper-labels {
   position: absolute;
   top: 20px;
-  right: 0;
-  background-color: red;
-  padding: 2px 5px 2px 5px;
-  h4 {
-    margin-bottom: 0;
-  }
+  left: 0;
 }
-.ready-label {
-  position: absolute;
-  top: 20px;
-  right: 60px;
-  background-color: blue;
+
+.test:hover {
+  text-decoration: none;
+}
+
+.card-body {
+  background: #f3f5f1;
+  color: black;
+}
+
+.label {
   padding: 2px 5px 2px 5px;
+  border-radius: 0 15px 15px 0;
+  margin-bottom: 5px;
+  background-color: #af0023;
+  color: #fff;
   h4 {
     margin-bottom: 0;
+    font-size: 20px;
+  }
+  &__price {
+    font-size: 18px;
   }
 }
 </style>

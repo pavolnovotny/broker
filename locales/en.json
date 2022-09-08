@@ -34,7 +34,12 @@
     "disposition": "Disposition",
     "area": "Area",
     "isReady": "Ready",
-    "isNotReady": "We are preparing"
+    "isNotReady": "We are preparing",
+    "reserved": "Reserved",
+    "mainParameters": "Main parameters",
+    "keyParameters": "Key parameters",
+    "description": "Description",
+    "videoTour": "Video tour"
   },
   "offered services": "Are you interested in the offered services?",
   "banner": {

@@ -34,7 +34,12 @@
     "disposition": "Dispozice",
     "area": "Užitná plocha",
     "isReady": "Připraveno",
-    "isNotReady": "Připravujeme"
+    "isNotReady": "Připravujeme",
+    "reserved": "Rezervováno",
+    "mainParameters": "Hlavní parametry",
+    "keyParameters": "Klíčové parametry",
+    "description": "Popis",
+    "videoTour": "Videoprohlídka"
   },
   "offered services": "Zaujaly Vás nabízené služby?",
   "banner": {
