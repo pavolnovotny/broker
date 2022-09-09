@@ -87,6 +87,7 @@
   "WhyWorkWithMe": "Why work with me",
   "contact": {
     "Contact": "Contact",
+    "WhereYouCanFindMe": "Where you can find me",
     "name": "Name",
     "familyName": "Family name",
     "serviceType": "Type of service",
@@ -107,7 +108,12 @@
     "messageRequired": "Message is required.",
     "invalidEmail": "Email is invalid.",
     "invalidTelephone": "Telephone number is invalid.",
-    "sendMeMessage": "Send me a message"
+    "sendMeMessage": "Send me a message",
+    "requiredField": "Required field",
+    "contactCard": {
+      "motivationText": "If you would like to get in touch with me, you can write me, call me or come to my office.",
+      "lookingForwardToSeeYou": "I will look forward to seeing you!"
+    }
   },
-  "footer": "Michal Smiga. Certified Realtor. ID: 05237891 All rights reserved"
+  "footer": "Michal Smiga. Certified Realtor. ID: 05237891 All rights reserved."
 }

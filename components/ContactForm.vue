@@ -20,7 +20,7 @@
           </div>
 
           <div class="form-group">
-            <label for="telephone">{{ $t('contact.Telephone') }}</label>
+            <label for="telephone">{{ $t('contact.Telephone') }}*</label>
             <input
               type="number"
               v-model="user.telephone"
@@ -30,6 +30,7 @@
             />
             <div v-if="submitted && $v.user.telephone.$error" class="invalid-feedback">
               <span v-if="!$v.user.telephone.onlyCzechTel">{{ $t('contact.invalidTelephone') }}</span>
+              <span v-if="!$v.user.telephone.required">{{ $t('contact.telephoneRequired') }}</span>
             </div>
           </div>
 
@@ -49,6 +50,23 @@
           </div>
 
           <div class="form-group">
+            <label for="email">{{$t('contact.serviceType')}}*</label>
+            <select
+              type="text"
+              v-model="user.serviceType"
+              id="serviceType"
+              name="serviceType"
+              :class="['form-control' ,{ 'is-invalid': submitted && $v.user.serviceType.$error }]"
+            >
+              <option value=""></option>
+              <option v-for="option in options" :key="option.type" :value="option.type">{{option.type}}</option>
+            </select>
+            <div v-if="submitted && $v.user.serviceType.$error" class="invalid-feedback">
+              <span v-if="!$v.user.serviceType.required">{{ $t('contact.serviceRequired') }}</span>
+            </div>
+          </div>
+
+          <div class="form-group">
             <label for="message">{{ $t('contact.Message') }}*</label>
             <textarea
               v-model="user.message"
@@ -59,6 +77,8 @@
             />
             <div v-if="submitted && !$v.user.message.required" class="invalid-feedback">{{ $t('contact.messageRequired') }}</div>
           </div>
+
+          <div><p>* {{$t('contact.requiredField')}}</p></div>
 
           <div class="form-group">
             <button v-b-modal.modal-1 class="btn btn-success">{{ $t('contact.Send') }}</button>
@@ -83,6 +103,7 @@ export default {
         name: '',
         email: '',
         telephone: '',
+        serviceType: '',
         message: ''
       },
       submitted: false,
@@ -100,7 +121,8 @@ export default {
     user: {
       name: { required },
       email: { required, email },
-      telephone: { onlyCzechTel },
+      telephone: { onlyCzechTel, required },
+      serviceType: { required },
       message: { required }
     }
   },
@@ -111,14 +133,18 @@ export default {
       // stop here if form is invalid
       this.$v.$touch()
       if (this.$v.$invalid) {
-        console.log('problem')
         return
       }
 
       emailjs.sendForm('service_bvfesk3', 'template_y3h8xjf', this.$refs.form, '1SLzVUL_X0gJ4bW1g')
         .then((result) => {
           console.log('SUCCESS!', result.text)
-          this.$refs.form.reset()
+          this.submitted = false
+          this.user.name = null
+          this.user.email = null
+          this.user.telephone = null
+          this.user.serviceType = null
+          this.user.message = null
         }, (error) => {
           console.log('FAILED...', error.text)
         })
@@ -128,7 +154,7 @@ export default {
 </script>
 
 <style scoped>
-.jumbotron {
-  background-color: white;
+.card {
+  background-color: #f3f5f1;
 }
 </style>

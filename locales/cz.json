@@ -69,7 +69,7 @@
     "virtualVisitationText": "Interaktivní 3d prohlídka Vaší nemovitosti. Zážitek, který potencionálnímu zájemci dodá z pohodlí domova pocit jakoby v nemovitosti opravdu byl. ",
     "propertiesFinancing": "Financování nemovitosti",
     "propertiesFinancingText": "Spolupracuji s týmem finančních specialistů, kteří Vám dokáží kompletně zajistit nejvýhodnější hypotéku a všechny záležitosti okolo financování. Právě v dnešní době je potřeba u financování získat ty nejlepší podmínky, což se mým externím spolupracovníkům u klientů pravidelně daří.",
-    "propertiesSearching": "Vyhledávání nemovisotí",
+    "propertiesSearching": "Vyhledávání nemovitostí",
     "propertiesSearchingText": "Prověřím právní stav, celkový stav nemovitosti, fond oprav, historii nemovitostí, makléř, který nemovitost nabízí, realitní zákulisí celé transakce, vyjednám slevu a budu Vám asistovat při všech prohlídkách.",
     "photosAndVideos": "Fotky, videa, dron",
     "photosAndVideosText": "Zajímavá videoprohlídka, kvalitní fotografie, pohled na samotnou nemovitost a její okolí z ptačího pohledu formou dronu. Tenhle základ prezentace pro Vaší nemovitost rád zrealizuji.",
@@ -87,6 +87,7 @@
   "WhyWorkWithMe": "Proč spolupracovat se mnou",
   "contact": {
     "Contact": "Kontakt",
+    "WhereYouCanFindMe": "Kde mě najdete",
     "name": "Meno",
     "familyName": "Příjmení",
     "serviceType": "Typ služby",
@@ -107,7 +108,12 @@
     "messageRequired": "Zadajte prosím spŕavu.",
     "invalidEmail": "Nesprávny tvar emailu.",
     "invalidTelephone": "Nesprávny tvar telefónného čísla.",
-    "sendMeMessage": "Napíšte mi"
+    "sendMeMessage": "Napíšte mi",
+    "requiredField": "Vyžadované pole",
+    "contactCard": {
+      "motivationText": "Pokud se se mnou chcete spojit, můžete mi napsat, zavolat nebo přijít do mojí kanceláře.",
+      "lookingForwardToSeeYou": "Budu se na Vás těšit !"
+    }
   },
   "footer": "Michal Smiga. Certifikovaný realitní makléř. IČO: 05237891 Všechna práva vyhrazena"
 }
