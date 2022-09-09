@@ -2,7 +2,7 @@
   <b-container>
     <section id="post" v-editable="blok">
       <div class="thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
-      <h1>{{title}}</h1>
+      <h1 class="text-center mt-3 mb-3">{{title}}</h1>
       <p>{{content}}</p>
     </section>
   </b-container>

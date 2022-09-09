@@ -3,7 +3,7 @@
     <nuxt-link
       :key="id"
       :to="`/property-offers/${id}`"
-      class="test"
+      class="preview"
     >
       <b-card :title="title" :img-src="heroImage" :img-alt="title" img-top class="position-relative">
         <div class="wrapper-labels">
@@ -12,15 +12,15 @@
           <div v-if="isReserved" class="label ready-label"><h4>{{$t('propertyOffers.reserved')}}</h4></div>
         </div>
         <b-card-text class="d-flex flex-column">
-          <div class="label__price mb-2">{{price}} Czk</div>
+          <div class="label__price mb-2 font-weight-bold">{{price}} Czk</div>
           <div class="d-flex justify-content-between">
-            <div><span>{{$t('propertyOffers.city')}}: </span><span>{{city}}</span></div>
-            <div><span>{{$t('propertyOffers.street')}}: </span><span>{{street}}</span></div>
+            <div><strong>{{$t('propertyOffers.city')}}: </strong><span>{{city}}</span></div>
+            <div><strong>{{$t('propertyOffers.street')}}: </strong><span>{{street}}</span></div>
           </div>
           <div>
             <div>
-              <div class="mt-2 mb-2"><span>{{$t('propertyOffers.disposition')}}: </span><span>{{disposition}}</span></div>
-              <div class="mb-2"><span>{{$t('propertyOffers.area')}}: </span><span>{{usableArea}}m²</span></div>
+              <div class="mt-2 mb-2"><strong>{{$t('propertyOffers.disposition')}}: </strong><span>{{disposition}}</span></div>
+              <div class="mb-2"><strong>{{$t('propertyOffers.area')}}: </strong><span>{{usableArea}}m²</span></div>
             </div>
             <button class="btn btn-success">DETAIL</button>
           </div>
@@ -100,7 +100,7 @@ export default {
   left: 0;
 }
 
-.test:hover {
+.preview:hover {
   text-decoration: none;
 }
 
@@ -120,7 +120,7 @@ export default {
     font-size: 20px;
   }
   &__price {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 </style>

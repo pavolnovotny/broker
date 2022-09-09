@@ -12,6 +12,7 @@
           :excerpt="post.previewText"
           :thumbnail-image="post.thumbnailUrl"
           :id="post.id"
+          :created-at="post.createdAt"
           class="col-xl-6"
         />
       </b-row>
@@ -40,13 +41,15 @@ export default {
         starts_with: 'blog/'
       })
       .then((res) => {
+        console.log(res.data)
         return {
           posts: res.data.stories.map((bp) => {
             return {
               id: bp.slug,
               title: bp.content.title,
               previewText: bp.content.summary,
-              thumbnailUrl: bp.content.thumbnail
+              thumbnailUrl: bp.content.thumbnail,
+              createdAt: bp.created_at
             }
           })
         }

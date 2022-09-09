@@ -113,6 +113,7 @@ export default {
         { type: this.$t('contact.Financing') },
         { type: this.$t('contact.Management') },
         { type: this.$t('contact.Search') },
+        { type: this.$t('services.ThermalManagement') },
         { type: this.$t('contact.AnotherTopic') }
       ]
     }

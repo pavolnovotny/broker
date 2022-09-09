@@ -38,16 +38,18 @@
     </b-container>
     <b-container>
       <b-row class="justify-content-center mt-5 mb-5">
-        <div class="d-flex flex-column align-items-center">
-          <div>Cena: 5.490.000Kč</div>
-          <div>Spočítej si rychle a zdarma nejvýhodnější hypotéku na www.hypo-portal.cz</div>
+        <div class="d-flex flex-column align-items-center price-list">
+          <h4>Cena: 5.490.000Kč</h4>
+          <h4>{{$t('propertyOffers.countMortgage')}} www.hypo-portal.cz</h4>
         </div>
       </b-row>
       <b-row class="justify-content-center">
-        <h3>MÁŠ ZÁJEM O PROHLÍDKU? NAPIŠ A DOMLUVÍME SI TERMÍN</h3>
+        <h3>{{$t('propertyOffers.tourInterest')}}</h3>
       </b-row>
-      <b-row class="justify-content-center">
-        <ContactForm/>
+      <b-row class="justify-content-center mt-3 mb-3">
+        <b-col md="6" xl="6">
+          <ContactForm/>
+        </b-col>
       </b-row>
     </b-container>
   </section>
@@ -105,5 +107,9 @@ export default {
   height: 300px;
   background-size: cover;
   background-position: center;
+}
+.price-list {
+  background-color: #f3f5f1;
+  padding: 30px 20px;
 }
 </style>

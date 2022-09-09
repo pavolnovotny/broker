@@ -39,7 +39,9 @@
     "mainParameters": "Hlavné parametre",
     "keyParameters": "Kľúčové parametre",
     "description": "Popis",
-    "videoTour": "Videoprehliadka"
+    "videoTour": "Videoprehliadka",
+    "tourInterest": "MÁTE ZÁUJEM O PREHLIADKU? NAPÍŠTE A DOHOVÍME SI TERMÍN",
+    "countMortgage": "Spočítajte si rýchlo a zadarmo najvýhodnejšiu hypotéku na "
   },
   "offered services": "Máte záujem o ponúkané služby?",
   "banner": {
@@ -112,7 +114,9 @@
     "requiredField": "Vyžadované pole",
     "contactCard": {
       "motivationText": "Pokiaľ sa so mnou chcete spojiť, môžete mi napísať, zavolať alebo prísť do mojej kancelárie.",
-      "lookingForwardToSeeYou": "Budem sa na Vás tešiť!"
+      "lookingForwardToSeeYou": "Budem sa na Vás tešiť!",
+      "telephone": "Telefón",
+      "address": "Adresa"
     }
   },
   "footer": "Michal Smiga. Certifikovaný realitný maklér. IČO: 05237891 Všetky práva vyhradené."

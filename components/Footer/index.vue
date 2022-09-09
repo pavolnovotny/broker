@@ -32,6 +32,9 @@
             <li class="d-inline-block"><BIconEnvelope class="icon"/><span>michal.smiga@kwcz.cz</span></li>
           </ul>
         </div>
+        <div class="ml-3 qr-code">
+          <img class="d-inline-block" src="~/static/images/contact-qr.png" alt="contact">
+        </div>
       </b-row>
     </b-container>
     <b-container fluid class="footer-bottom">
@@ -61,6 +64,10 @@ export default {
 footer {
   background-color: #06112a;
   color: rgba(255, 255, 255, 0.7);
+}
+.qr-code img {
+  height: 150px;
+  width: 150px;
 }
 .logo {
   width: 100px;

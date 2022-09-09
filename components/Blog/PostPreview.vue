@@ -3,12 +3,13 @@
     <nuxt-link
       :key="id"
       :to="`/blogs/${id}`"
+      class="preview"
     >
       <b-card :title="title" :img-src="thumbnailImage" :img-alt="title" img-top>
         <b-card-text>
           {{excerpt}}
         </b-card-text>
-        <b-card-text class="small text-muted">Last updated 3 mins ago</b-card-text>
+        <b-card-text class="small text-muted">Last updated {{time}}</b-card-text>
       </b-card>
     </nuxt-link>
   </div>
@@ -33,6 +34,17 @@ export default {
     id: {
       type: String,
       required: true
+    },
+    createdAt: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    time () {
+      const date = new Date(this.createdAt)
+      console.log(date)
+      return date.toISOString()
     }
   }
 }
@@ -40,7 +52,10 @@ export default {
 
 <style scoped>
 .preview {
-  border: 1px solid black;
+  color: #06112a;
+}
+.preview:hover {
+  text-decoration: none;
 }
 
 .thumbnail {
@@ -52,5 +67,6 @@ export default {
 
 .wrapper {
   max-width: 350px;
+  margin-bottom: 20px;
 }
 </style>
