@@ -49,8 +49,12 @@
   },
   "services": {
     "Services": "Služby",
+    "SellRentSearchProperties": "Predaj, prenájom, vyhľadanie nehnuteľnosti",
+    "MarketingFinancingLegalService": "Marketing, financovanie, právny servis",
+    "ThermalManagement": "Tepelné hospodárstvo",
+    "ThermalManagementText": "Zaistím riešenie potrieb tepelného hospodárstva od samotného vypracovania dokumentácie (ZTI, UT ak tomu naviazanej profesie) až po realizáciu stavby, záručný a pozáručný servis, vzdialený monitoring. To sa týka centrálneho napojenia pomocou výmenníka tepla alebo lokálnej kotolne použitím tepelného čerpadla či fotovoltaiky.",
     "sellingProperties": "Predaj nehnuteľností",
-    "sellingPropertiesText": "S využitím mojich skúseností a služieb dokážem rýchlo a za maximálnu cenu predať Vašu nehnuteľnosť.",
+    "sellingPropertiesText": "Vďaka svojim skúsenostiam a službám dokážem predať Vašu nehnuteľnosť rýchlo a za maximálnu cenu.",
     "marketingAndPropagation": "Marketing a propagácia",
     "marketingAndPropagationText": "Nadštandardný marketing pre Vašu nehnuteľnosť.Cez reklamy na sociálnych sieťach až po využitie mojich známostí na predaj.",
     "homeStaging": "Home Staging",
@@ -58,13 +62,13 @@
     "legalService": "Právny servis",
     "legalServiceText": "Spolupracujem s tímom právnych špecialistov. Postarám sa o všetky právne záležitosti spojené s vašou nehnuteľnosťou od A do Z.",
     "rentingProperties": "Prenájom nehnuteľnosti",
-    "rentingPropertiesText": "Len v Prahe sa priemerne prenajíma 5 000 bytov mesačne, so mnou máte istotu, že ten Váš sa medzi nimi nestratí a nájde rýchlo bonitného záujemcu.",
+    "rentingPropertiesText": "Len v Prahe sa priemerne prenajíma 5 000 bytov mesačne, so mnou máte istotu, že ten Váš sa medzi nimi nestratí a nájde rýchlo bonitného nájomcu.",
     "web": "Vlastný web nehnuteľnosti",
     "webText": "Pre Vaše nehnuteľnosti nechám vytvoriť modernú webovú prezentáciu. Táto služba pomáha záujemcom sa naozaj rozhodnúť a nehnuteľnosť si zaobstarať.",
     "virtualVisitation": "Virtuálne prehliadky",
     "virtualVisitationText": "Interaktívna 3d prehliadka Vašej nehnuteľnosti. Zážitok, ktorý potencionálnemu záujemcovi dodá z pohodlia domova pocit akoby v nehnuteľnosti naozaj bol.",
     "propertiesFinancing": "Financovanie nehnuteľnosti",
-    "propertiesFinancingText": "Spolupracujem s tímom finančných špecialistov, ktorí Vám dokážu kompletne zaistiť najvýhodnejšiu hypotéku a všetky záležitosti okolo financovania.",
+    "propertiesFinancingText": "Spolupracujem s tímom finančných špecialistov, ktorí Vám dokážu kompletne zaistiť najvýhodnejšiu hypotéku a všetky záležitosti okolo financovania. Práve v dnešnej dobe je potrebné pri financovaní získať tie najlepšie podmienky, čo sa mojim externým spolupracovníkom u klientov pravidelne darí.",
     "propertiesSearching": "Vyhľadávanie nehnuteľností",
     "propertiesSearchingText": "Preverím právny stav, celkový stav nehnuteľnosti, fond opráv, históriu nehnuteľností, maklér, ktorý nehnuteľnosť ponúka, realitné zákulisia celej transakcie, vyjednám zľavu a budem Vám asistovať pri všetkých prehliadkach.",
     "photosAndVideos": "Fotky, videá, dron",
@@ -72,7 +76,7 @@
     "paintingAndCleaning": "Opravy, maľovanie, upratovanie",
     "paintingAndCleaningText": "Vďaka svojim skúsenostiam sa nebojím ani tejto práce. Ak usúdim, že je to potrebné, tak nehnuteľnosť vlastnoručne vymaľujem, opravím a samozrejme upratám.",
     "propertyManagement": "Správa nehnuteľností",
-    "propertyManagementText": "Svojimi nadobudnutými skúsenosťami a kontaktmi so správy nehnuteľností dokážem Váš prázdny byt dlhodobo obsadiť bezprobémovým nájomcom."
+    "propertyManagementText": "Vďaka svojim skúsenostiam a kontaktom (zahraničná klientela) dokážem Váš prázdny byt dlhodobo obsadiť bezproblémovým nájomcom."
   },
   "about": {
     "AboutMe": "O mne",

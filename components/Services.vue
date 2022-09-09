@@ -3,9 +3,9 @@
     <b-container>
       <h1 class="pt-5 pb-5 text-center">{{ $t('services.Services') }}</h1>
       <b-row>
-        <!-- real estate -->
-        <b-col xl="4">
-          <h2>NEMOVITOSTI</h2>
+        <!-- Sale, rent, property search -->
+        <b-col md="6" xl="6" class="mb-4">
+          <h4 class="text-center">{{$t('services.SellRentSearchProperties')}}</h4>
           <div class="accordion" role="tablist">
             <b-card class="mb-1">
               <b-card-header header-tag="header" class="p-1" role="tab">
@@ -29,29 +29,9 @@
             </b-card>
             <b-card class="mb-1">
               <b-card-header header-tag="header" class="p-1" role="tab">
-                <b-button block v-b-toggle.accordion-3 variant="success">{{$t('services.propertiesFinancing')}}</b-button>
+                <b-button block v-b-toggle.accordion-3 variant="success">{{$t('services.propertiesSearching')}}</b-button>
               </b-card-header>
               <b-collapse id="accordion-3" visible accordion="my-accordion" role="tabpanel">
-                <b-card-body>
-                  <b-card-text>{{$t('services.propertiesFinancingText')}}</b-card-text>
-                </b-card-body>
-              </b-collapse>
-            </b-card>
-            <b-card class="mb-1">
-              <b-card-header header-tag="header" class="p-1" role="tab">
-                <b-button block v-b-toggle.accordion-4 variant="success">{{$t('services.propertyManagement')}}</b-button>
-              </b-card-header>
-              <b-collapse id="accordion-4" visible accordion="my-accordion" role="tabpanel">
-                <b-card-body>
-                  <b-card-text>{{$t('services.propertyManagementText')}}</b-card-text>
-                </b-card-body>
-              </b-collapse>
-            </b-card>
-            <b-card class="mb-1">
-              <b-card-header header-tag="header" class="p-1" role="tab">
-                <b-button block v-b-toggle.accordion-5 variant="success">{{$t('services.propertiesSearching')}}</b-button>
-              </b-card-header>
-              <b-collapse id="accordion-5" visible accordion="my-accordion" role="tabpanel">
                 <b-card-body>
                   <b-card-text>{{$t('services.propertiesSearchingText')}}</b-card-text>
                 </b-card-body>
@@ -59,71 +39,25 @@
             </b-card>
           </div>
         </b-col>
-        <!-- legal service -->
-        <b-col xl="4">
+        <!-- Marketing, financing, legal service -->
+        <b-col md="6" xl="6" class="mb-4">
           <div class="accordion" role="tablist">
-            <h2>LEGAL SERVICE</h2>
+            <h4 class="text-center">{{$t('services.MarketingFinancingLegalService')}}</h4>
               <b-card class="mb-1">
                 <b-card-header header-tag="header" class="p-1" role="tab">
-                  <b-button block v-b-toggle.accordion-6 variant="success">{{$t('services.legalService')}}</b-button>
+                  <b-button block v-b-toggle.accordion-4 variant="success">{{$t('services.marketingAndPropagation')}}</b-button>
                 </b-card-header>
-                <b-collapse id="accordion-6" visible accordion="my-accordion" role="tabpanel">
+                <b-collapse id="accordion-4" visible accordion="my-accordion" role="tabpanel">
                   <b-card-body>
-                    <b-card-text>{{$t('services.legalServiceText')}}</b-card-text>
+                    <b-card-text>{{$t('services.marketingAndPropagationText')}}</b-card-text>
                   </b-card-body>
                 </b-collapse>
               </b-card>
-          </div>
-        </b-col>
-        <!-- Additional -->
-        <b-col xl="4">
-          <h2>ADDITIONAL</h2>
-          <div class="accordion" role="tablist">
             <b-card class="mb-1">
               <b-card-header header-tag="header" class="p-1" role="tab">
-                <b-button block v-b-toggle.accordion-7 variant="success">{{$t('services.photosAndVideos')}}</b-button>
+                <b-button block v-b-toggle.accordion-5 variant="success">{{$t('services.web')}}</b-button>
               </b-card-header>
-              <b-collapse id="accordion-7" visible accordion="my-accordion" role="tabpanel">
-                <b-card-body>
-                  <b-card-text>{{$t('services.photosAndVideosText')}}</b-card-text>
-                </b-card-body>
-              </b-collapse>
-            </b-card>
-            <b-card class="mb-1">
-              <b-card-header header-tag="header" class="p-1" role="tab">
-                <b-button block v-b-toggle.accordion-8 variant="success">{{$t('services.paintingAndCleaning')}}</b-button>
-              </b-card-header>
-              <b-collapse id="accordion-8" visible accordion="my-accordion" role="tabpanel">
-                <b-card-body>
-                  <b-card-text>{{$t('services.paintingAndCleaningText')}}</b-card-text>
-                </b-card-body>
-              </b-collapse>
-            </b-card>
-            <b-card class="mb-1">
-              <b-card-header header-tag="header" class="p-1" role="tab">
-                <b-button block v-b-toggle.accordion-9 variant="success">{{$t('services.homeStaging')}}</b-button>
-              </b-card-header>
-              <b-collapse id="accordion-9" visible accordion="my-accordion" role="tabpanel">
-                <b-card-body>
-                  <b-card-text>{{$t('services.homeStagingText')}}</b-card-text>
-                </b-card-body>
-              </b-collapse>
-            </b-card>
-            <b-card class="mb-1">
-              <b-card-header header-tag="header" class="p-1" role="tab">
-                <b-button block v-b-toggle.accordion-10 variant="success">{{$t('services.virtualVisitation')}}</b-button>
-              </b-card-header>
-              <b-collapse id="accordion-10" visible accordion="my-accordion" role="tabpanel">
-                <b-card-body>
-                  <b-card-text>{{$t('services.virtualVisitationText')}}</b-card-text>
-                </b-card-body>
-              </b-collapse>
-            </b-card>
-            <b-card class="mb-1">
-              <b-card-header header-tag="header" class="p-1" role="tab">
-                <b-button block v-b-toggle.accordion-11 variant="success">{{$t('services.web')}}</b-button>
-              </b-card-header>
-              <b-collapse id="accordion-11" visible accordion="my-accordion" role="tabpanel">
+              <b-collapse id="accordion-5" visible accordion="my-accordion" role="tabpanel">
                 <b-card-body>
                   <b-card-text>{{$t('services.webText')}}</b-card-text>
                 </b-card-body>
@@ -131,11 +65,83 @@
             </b-card>
             <b-card class="mb-1">
               <b-card-header header-tag="header" class="p-1" role="tab">
-                <b-button block v-b-toggle.accordion-12 variant="success">{{$t('services.marketingAndPropagation')}}</b-button>
+                <b-button block v-b-toggle.accordion-6 variant="success">{{$t('services.photosAndVideos')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-6" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.photosAndVideosText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-7 variant="success">{{$t('services.homeStaging')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-7" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.homeStagingText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-8 variant="success">{{$t('services.virtualVisitation')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-8" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.virtualVisitationText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-9 variant="success">{{$t('services.paintingAndCleaning')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-9" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.paintingAndCleaningText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-10 variant="success">{{$t('services.legalService')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-10" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.legalServiceText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+          </div>
+        </b-col>
+        <!-- Real estate management -->
+        <b-col md="6" xl="6" class="mb-4">
+          <h4 class="text-center">{{$t('services.propertyManagement')}}</h4>
+          <div class="accordion" role="tablist">
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-11 variant="success">{{$t('services.propertyManagement')}}</b-button>
+              </b-card-header>
+              <b-collapse id="accordion-11" visible accordion="my-accordion" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{$t('services.propertyManagementText')}}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+          </div>
+        </b-col>
+        <!-- Thermal management -->
+        <b-col md="6" xl="6" class="mb-4">
+          <h4 class="text-center">{{$t('services.ThermalManagement')}}</h4>
+          <div class="accordion" role="tablist">
+            <b-card class="mb-1">
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <b-button block v-b-toggle.accordion-12 variant="success">{{$t('services.ThermalManagement')}}</b-button>
               </b-card-header>
               <b-collapse id="accordion-12" visible accordion="my-accordion" role="tabpanel">
                 <b-card-body>
-                  <b-card-text>{{$t('services.marketingAndPropagationText')}}</b-card-text>
+                  <b-card-text>{{$t('services.ThermalManagementText')}}</b-card-text>
                 </b-card-body>
               </b-collapse>
             </b-card>
@@ -155,7 +161,7 @@ export default {
 
 <style scoped>
 section {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   background-color: #FEFFFF;
 }
 </style>
