@@ -18,6 +18,11 @@
     "blogs": "BLOGS",
     "propertyOffers": "PROPERTY OFFERS"
   },
+  "error": {
+    "title": "Look like you're lost",
+    "message": "the page you are looking for not avaible!",
+    "goHome": "Go Home"
+  },
   "Blogs": "Blogs",
   "message": "Bonjour",
   "cookies": {

@@ -18,6 +18,11 @@
     "blogs": "ČLÁNKY",
     "propertyOffers": "NABÍDKA NEMOVITOSTÍ"
   },
+  "error": {
+    "title": "Vypadá to, že ses ztratil",
+    "message": "stránka, kterou hledáte, není k dispozici!",
+    "goHome": "Jet Domů"
+  },
   "Blogs": "Články",
   "message": "cc",
   "cookies": {

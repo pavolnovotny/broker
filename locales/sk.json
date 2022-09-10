@@ -18,6 +18,11 @@
     "blogs": "ČLÁNKY",
     "propertyOffers": "PONUKA NEHNUTEĽNOSTÍ"
   },
+  "error": {
+    "title": "Vyzerá to, že si sa stratil",
+    "message": "stránka, ktorú hľadáte, nie je k dispozícii!",
+    "goHome": "Isť Domov"
+  },
   "Blogs": "Články",
   "message": "Bonjour",
   "cookies": {

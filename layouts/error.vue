@@ -1,5 +1,24 @@
 <template>
-  <h1>ss</h1>
+  <section class="page_404">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 ">
+          <div class="col-sm-10 col-sm-offset-1  text-center">
+            <div class="four_zero_four_bg">
+              <h1 class="text-center ">404</h1>
+            </div>
+            <div class="contant_box_404">
+              <h3 class="h2">
+                {{$t('error.title')}}
+              </h3>
+              <p>{{$t('error.message')}}</p>
+              <nuxt-link to="/" class="btn btn-success">{{$t('error.goHome')}}</nuxt-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -9,242 +28,36 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$p: 12px;
-$easeOutCubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-$easeOutExpo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
-
-*, *:before, *:after {
-  box-sizing: border-box;
+.page_404 {
+  padding:40px 0;
+  background:#fff;
 }
 
-* {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  transform-style: preserve-3d;
+.page_404 img{
+  width:100%;
 }
 
-*:focus {
-  outline: none!important;
+.four_zero_four_bg{
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
 }
 
-body, html {
-  height: 100%;
+.four_zero_four_bg h1{
+  font-size:80px;
 }
 
-body {
-  background: #121214;
+.four_zero_four_bg h3{
+  font-size:80px;
 }
 
-main {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  height: 100%;
-  padding: $p;
-  perspective: 1000px;
-
-  overflow-x: hidden;
-  /* Overflow-y is optional */
-  overflow-y: hidden;
-> div {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-svg {
-  height: 100%;
-}
-&:nth-child(1) {
-   opacity: 0;
-   transform: translateZ(1000px);
-   animation: zoomFadeIn 5000ms $easeOutCubic forwards;
-   transform-origin: center center;
-.error-1-e {
-  transform: translateX(-50%);
-  animation: slideRight 3000ms $easeOutCubic -500ms forwards;
-}
-.error-2-r {
-  transform: translateY(-20%);
-  animation: slideDown 5000ms $easeOutCubic -500ms  forwards;
-}
-.error-4-o {
-  transform: translateX(10%);
-  animation: slideLeftSmall 3000ms $easeOutCubic -300ms forwards;
-}
-.error-5-r {
-  transform: translateX(50%);
-  animation: slideLeft 3000ms $easeOutCubic -500ms  forwards;
-}
-.error-2-0 {
-  transform: translateY(20%);
-  animation: slideUp 5000ms $easeOutCubic -500ms  forwards;
-}
-.error-top {
-  transform: scaleX(0);
-// transform-origin: center center;
-  transform-origin: 163px 3px;
-
-// Extending time: 4.5s - Delay: 1.5s
-animation: scaleXIn 4500ms $easeOutExpo 1500ms forwards;
-}
-.error-left {
-  transform: scaleX(0);
-// transform-origin: right center;
-  transform-origin: 75px 3px;
-
-// Extending time: 4.5s - Delay: 1.5s
-animation: scaleXIn 4500ms $easeOutExpo 1500ms forwards;
-}
-.error-right {
-  transform: scaleX(0);
-// transform-origin: left center;
-  transform-origin: 250px 3px;
-
-// Extending time: 4.5s - Delay: 4.5s
-animation: scaleXIn 4500ms $easeOutExpo 1500ms forwards;
-}
-}
-&:nth-child(2) {
-.quote-top, .quote-bottom {
-  opacity: 0;
-
-// Extending time: 1.5s - Delay: 4.75s
-animation: slideUpFadeIn 1500ms $easeOutCubic 4750ms forwards;
-}
-.quote-bottom {
-  animation-delay: 5750ms;
-}
-}
-&:nth-child(3) {
-.link-phrase, .link-mark {
-  opacity: 0;
-  animation: slideUpFadeIn 1000ms $easeOutCubic 6250ms forwards;
-}
-.link-mark {
-  opacity: 0;
-  animation: fadeIn 1000ms $easeOutCubic 6750ms forwards;
-}
-a {
-  cursor: pointer;
-  transition: all 500ms ease-out;
-.top use {
-  transition: all 150ms ease-out;
-}
-&:hover, &:focus {
-            animation: jitter 225ms ease-in-out 2 forwards;
-.top use {
-  fill: white;
-}
-}
-&:active {
-.top use {
-  fill: darken(#FF0000, 15%);
-}
-}
-}
-}
-}
-}
-
-@-moz-document url-prefix() {
-  main {
-  > div {
-&:nth-child(3) {
-  a {
-&:hover, &:focus {
-            animation: none;
-          }
-}
-}
-}
-}
-}
-
-@keyframes slideDown {
-  0% { transform: translateY(-20%); }
-  100% { transform: none; }
-}
-@keyframes slideUp {
-  0% { transform: translateY(20%); }
-  100% { transform: none; }
-}
-@keyframes slideRight {
-  0% { transform: translateX(-50%); }
-  100% { transform: none; }
-}
-@keyframes slideLeft {
-  0% { transform: translateX(50%); }
-  100% { transform: none; }
-}
-@keyframes slideLeftSmall {
-  0% { transform: translateX(10%); }
-  100% { transform: none; }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes slideUpFadeIn {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: none;
-    opacity: 1;
-  }
-}
-
-@keyframes scaleXIn {
-  0% { transform: scaleX(0); }
-  100% { transform: none; }
-}
-
-@keyframes zoomFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateZ(1000px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes jitter {
-  0% {
-    transform: translateX(0px) translateY(0px);
-    opacity: 1;
-  }
-  10% {
-    transform: translateX(2px) translateY(2px);
-    opacity: 0.8;
-  }
-  20% {
-    transform: translateX(0px) translateY(0px);
-    opacity: 0.47;
-  }
-  30% {
-    transform: translateX(0px) translateY(2px);
-    opacity: 0.3;
-  }
-  70% {
-    transform: translateX(-1px) translateY(1px);
-    opacity: 0.96;
-  }
-  80% {
-    transform: translateX(0px) translateY(-2px);
-    opacity: 0.9;
-  }
-  90% {
-    transform: translateX(1px) translateY(-2px);
-    opacity: 0.81;
-  }
-  100% {
-    transform: translateX(0) translateY(0);
-    opacity: 1;
-  }
+.link_404{
+  color: #fff!important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;}
+.contant_box_404 {
+  margin-top:-50px;
 }
 </style>
