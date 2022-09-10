@@ -1,4 +1,5 @@
 import i18n from './config/i18n'
+const axios = require('@nuxtjs/axios')
 require('dotenv').config()
 
 export default {
@@ -37,7 +38,12 @@ export default {
     googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
   },
 
-  generate: { fallback: '404.html' },
+  generate: {
+    fallback: '404.html',
+    routes: function () {
+      axios.get('https://api.storybolok.com/v1/cdn/stories?version=published&token=CLgiCKTz3143Rpqafb89Wgtt&cv=' + Math.floor(Date.now() / 1e3))
+    }
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -87,7 +93,7 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
-    ['storyblok-nuxt', {accessToken: 'QLa9drCU8R4C8kNmnOg06Qtt', cacheProvider: 'memory'}],
+    ['storyblok-nuxt', {accessToken: process.env.NODE_ENV === 'production' ? 'CLgiCKTz3143Rpqafb89Wgtt' : 'QLa9drCU8R4C8kNmnOg06Qtt', cacheProvider: 'memory'}],
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',

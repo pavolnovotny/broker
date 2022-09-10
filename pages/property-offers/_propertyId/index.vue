@@ -85,7 +85,7 @@ export default {
   },
   asyncData (context) {
     return context.app.$storyapi.get('cdn/stories/property-offers/' + context.params.propertyId, {
-      version: 'draft'
+      version: context.isDev ? 'draft' : 'published'
     }).then((res) => {
       return {
         blok: res.data.story.content,
