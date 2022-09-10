@@ -10,19 +10,25 @@
             <b-tabs card>
               <b-tab :title="$t('propertyOffers.mainParameters')" active>
                 <b-card-text>
-                  <div class="">
-                    <ul class="main-keys  list-unstyled">
-                      <li><strong>Stav nemovitosti :</strong><span>NA PRODEJ</span></li>
-                      <li><strong>Město :</strong><span>Kamenice - Těptín</span></li>
-                      <li><strong>Ulice :</strong><span>Toulovská</span></li>
-                      <li><strong>Dispozice :</strong><span>5+kk</span></li>
-                      <li><strong>Užitná plocha :</strong><span>178 m²</span></li>
+                  <div>
+                    <ul class="main-keys list-unstyled">
+                      <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.propertyCondition')}}: </strong><span>{{onSaleText}}</span></li>
+                      <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.city')}}: </strong><span>{{city}}</span></li>
+                      <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.street')}}: </strong><span>{{street}}</span></li>
+                      <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.disposition')}}: </strong><span>{{disposition}}</span></li>
+                      <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.area')}}: </strong><span>{{usableArea}} m²</span></li>
                     </ul>
                   </div>
                 </b-card-text>
               </b-tab>
               <b-tab :title="$t('propertyOffers.keyParameters')">
-                <b-card-text>{{keyParameters}}</b-card-text>
+                <b-card-text>
+                  <div>
+                    <ul class="list-unstyled key-params">
+                      <li v-for="(param, i) in keyParametersArray" :key="i" class="mt-1 mb-1" ><BIconCheckCircleFill/> {{param}}</li>
+                    </ul>
+                  </div>
+                </b-card-text>
               </b-tab>
               <b-tab :title="$t('propertyOffers.description')">
                 <b-card-text>{{ description }}</b-card-text>
@@ -46,16 +52,12 @@
         <Map :src="map"/>
       </b-row>
     </b-container>
-    <b-container>
-      <b-row class="justify-content-center mt-5 mb-5">
-        <div class="d-flex flex-column align-items-center price-list">
-          <h4>{{$t('propertyOffers.price')}}: {{ price }}Kč</h4>
-          <h4>{{$t('propertyOffers.countMortgage')}} <a target="_blank" href="https://www.hypo-portal.cz">www.hypo-portal.cz</a> </h4>
-        </div>
-      </b-row>
-      <b-row class="justify-content-center">
-        <h3>{{$t('propertyOffers.tourInterest')}}</h3>
-      </b-row>
+    <b-container class="mt-4 mb-4">
+      <div class="d-flex flex-column align-items-center price-list">
+        <h4>{{$t('propertyOffers.price')}}: {{ price }}Kč</h4>
+        <h4>{{$t('propertyOffers.countMortgage')}} <a target="_blank" href="https://www.hypo-portal.cz">www.hypo-portal.cz</a> </h4>
+      </div>
+      <h3 class="text-center mt-4 mb-4">{{$t('propertyOffers.tourInterest')}}</h3>
       <b-row class="justify-content-center mt-3 mb-3">
         <b-col md="6" xl="6">
           <ContactForm/>
@@ -66,23 +68,25 @@
 </template>
 
 <script>
+import { BIconCheckCircleFill } from 'bootstrap-vue'
 import Carousel from '../../../components/shared/Carousel'
 import Video from '../../../components/shared/Video'
 import Map from '../../../components/shared/Map'
 import ContactForm from '../../../components/ContactForm'
+
 export default {
   name: 'propertyId-index',
   components: {
     Carousel,
     Video,
     Map,
-    ContactForm
+    ContactForm,
+    BIconCheckCircleFill
   },
   asyncData (context) {
     return context.app.$storyapi.get('cdn/stories/property-offers/' + context.params.propertyId, {
       version: 'draft'
     }).then((res) => {
-      console.log(res.data.story.content)
       return {
         blok: res.data.story.content,
         title: res.data.story.content.title,
@@ -103,10 +107,11 @@ export default {
     })
   },
   computed: {
-    keyParametersToStrings () {
-      const parameters = this.keyParameters.split(',')
-      console.log(parameters)
-      return parameters
+    keyParametersArray () {
+      return this.keyParameters.split(',')
+    },
+    onSaleText () {
+      return this.isOnSale ? this.$t('propertyOffers.onSale') : this.$t('propertyOffers.onRent')
     }
   }
   // mounted () {
@@ -129,28 +134,28 @@ export default {
   background-color: #f3f5f1;
   padding: 30px 20px;
 }
-.main-keys {
+.main-keys, .key-params {
   columns: 1;
   -webkit-columns: 1;
   -moz-columns: 1;
 
 }
 @media (min-width: 576px) {
-  .main-keys {
+  .main-keys, .key-params {
     columns: 1;
     -webkit-columns: 1;
     -moz-columns: 1;
   }
 }
 @media (min-width: 768px) {
-  .main-keys {
+  .main-keys, .key-params {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
   }
 }
 @media (min-width: 992px) {
-  .main-keys {
+  .main-keys, .key-params {
     columns: 3;
     -webkit-columns: 3;
     -moz-columns: 3;
