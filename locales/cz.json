@@ -41,7 +41,9 @@
     "description": "Popis",
     "videoTour": "Videoprohlídka",
     "tourInterest": "MÁTE ZÁJEM O PROHLÍDKU? NAPIŠTE A DOMLUVÍME SI TERMÍN",
-    "countMortgage": "Spočítej si rychle a zdarma nejvýhodnější hypotéku na "
+    "countMortgage": "Spočítej si rychle a zdarma nejvýhodnější hypotéku na ",
+    "price": "Cena",
+    "propertyCondition": "Stav nemovitosti"
   },
   "offered services": "Zaujaly Vás nabízené služby?",
   "banner": {

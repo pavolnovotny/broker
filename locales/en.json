@@ -41,7 +41,9 @@
     "description": "Description",
     "videoTour": "Video tour",
     "tourInterest": "INTERESTED IN A TOUR? WRITE AND WE WILL MAKE AN APPOINTMENT",
-    "countMortgage": "Calculate the most favorable mortgage quickly and for free "
+    "countMortgage": "Calculate the most favorable mortgage quickly and for free ",
+    "price": "Price",
+    "propertyCondition": "Property condition"
   },
   "offered services": "Are you interested in the offered services?",
   "banner": {

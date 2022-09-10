@@ -9,10 +9,20 @@
           <b-card no-body>
             <b-tabs card>
               <b-tab :title="$t('propertyOffers.mainParameters')" active>
-                <b-card-text></b-card-text>
+                <b-card-text>
+                  <div class="">
+                    <ul class="main-keys  list-unstyled">
+                      <li><strong>Stav nemovitosti :</strong><span>NA PRODEJ</span></li>
+                      <li><strong>Město :</strong><span>Kamenice - Těptín</span></li>
+                      <li><strong>Ulice :</strong><span>Toulovská</span></li>
+                      <li><strong>Dispozice :</strong><span>5+kk</span></li>
+                      <li><strong>Užitná plocha :</strong><span>178 m²</span></li>
+                    </ul>
+                  </div>
+                </b-card-text>
               </b-tab>
               <b-tab :title="$t('propertyOffers.keyParameters')">
-                <b-card-text>{{}}</b-card-text>
+                <b-card-text>{{keyParameters}}</b-card-text>
               </b-tab>
               <b-tab :title="$t('propertyOffers.description')">
                 <b-card-text>{{ description }}</b-card-text>
@@ -39,8 +49,8 @@
     <b-container>
       <b-row class="justify-content-center mt-5 mb-5">
         <div class="d-flex flex-column align-items-center price-list">
-          <h4>Cena: 5.490.000Kč</h4>
-          <h4>{{$t('propertyOffers.countMortgage')}} www.hypo-portal.cz</h4>
+          <h4>{{$t('propertyOffers.price')}}: {{ price }}Kč</h4>
+          <h4>{{$t('propertyOffers.countMortgage')}} <a target="_blank" href="https://www.hypo-portal.cz">www.hypo-portal.cz</a> </h4>
         </div>
       </b-row>
       <b-row class="justify-content-center">
@@ -91,6 +101,13 @@ export default {
         map: res.data.story.content.map
       }
     })
+  },
+  computed: {
+    keyParametersToStrings () {
+      const parameters = this.keyParameters.split(',')
+      console.log(parameters)
+      return parameters
+    }
   }
   // mounted () {
   //   this.$storyblok.init()
@@ -111,5 +128,32 @@ export default {
 .price-list {
   background-color: #f3f5f1;
   padding: 30px 20px;
+}
+.main-keys {
+  columns: 1;
+  -webkit-columns: 1;
+  -moz-columns: 1;
+
+}
+@media (min-width: 576px) {
+  .main-keys {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+}
+@media (min-width: 768px) {
+  .main-keys {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
+@media (min-width: 992px) {
+  .main-keys {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+  }
 }
 </style>
