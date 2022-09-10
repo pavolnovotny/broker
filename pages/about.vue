@@ -21,17 +21,6 @@
         </b-row>
       </main>
     </b-container>
-<!--    <b-container fluid>-->
-<!--      <b-row>-->
-<!--        <b-embed-->
-<!--          class="map mb-0"-->
-<!--          type="iframe"-->
-<!--          aspect="16by9"-->
-<!--          src="https://www.google.com.qa/maps/d/embed?mid=1-9mYKUGgMjBXZt_KO6SHHOfZ6dvNX3c&ehbc=2E312F"-->
-<!--          allowfullscreen-->
-<!--        ></b-embed>-->
-<!--      </b-row>-->
-<!--    </b-container>-->
   </section>
 </template>
 
@@ -44,6 +33,21 @@ export default {
       sk: '/o-mne',
       en: '/about'
     }
+  },
+  head: {
+    title: 'O mne',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Ing. Michal Šmiga Mám za sebou více než 5 leté zkušenosti s realitami. Začínal jsem jako správce nemovitostí v Praze, speciálně pro zahraniční majitele a investory. Tato práce mě naučila, že okamžité řešení požadavků klienta je základem dobré a dlouhodobé spolupráce do budoucna.'
+      },
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'Ing. Michal Šmiga / o mne'
+      }
+    ]
   }
 }
 </script>

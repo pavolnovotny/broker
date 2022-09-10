@@ -37,6 +37,21 @@ export default {
       en: '/property-offers'
     }
   },
+  head: {
+    title: 'Ponuka nemovitosti',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Ponuka nemovitosti'
+      },
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'Ing. Michal Šmiga / Ponuka nemovitosti'
+      }
+    ]
+  },
   components: {
     Preview
   },

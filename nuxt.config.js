@@ -14,12 +14,18 @@ export default {
     }
   },
   head: {
-    title: 'smiga-broker',
+    title: 'Ing. Michal Šmiga - realitní makléř',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description',
+        name: 'description',
+        content: 'Certifikovaný realitní makléř spadající pod největší realitní kancelář na světě Keller Williams. Vaší nemovitost umím prodat/pronajmout rychle a za maximální cenu.' },
+      { name: 'format-detection', content: '725 747 519' },
+      { hid: 'og:site_name', name: 'og:site_name', content: 'wwww.msmiga.cz'},
+      { hid: 'og:title', name: 'og:title', content: 'Ing. Michal Šmiga - realitní makléř'},
+      { hid: 'og:type', name: 'og:type', content: 'personal portfolio'},
+      { hid: 'keywords', name: 'keywords', content: 'Ing Michal Smiga, realitni makler, prodej bytu, pronajem bytu, tepelne hospodarstvi, sprava nemovitosti, marketing, financovani, pravni servis' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

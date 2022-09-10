@@ -31,6 +31,21 @@ export default {
       en: '/blogs'
     }
   },
+  head: {
+    title: 'Články',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Články'
+      },
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'Ing. Michal Šmiga / Články'
+      }
+    ]
+  },
   components: {
     PostPreview
   },

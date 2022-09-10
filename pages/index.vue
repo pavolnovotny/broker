@@ -19,6 +19,21 @@ export default {
     Services,
     About,
     OfferedServices
+  },
+  head: {
+    title: 'HomePage',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Váš certifikovaný realitní makléř spadající pod největší realitní kancelář na světě Keller Williams. Vaší nemovitost umím prodat/pronajmout rychle a za maximální cenu.'
+      },
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'Ing. Michal Šmiga / homepage'
+      }
+    ]
   }
 }
 </script>

@@ -40,6 +40,21 @@ export default {
       sk: '/kontakt',
       en: '/contact'
     }
+  },
+  head: {
+    title: 'Kontakt',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Ing. Michal Šmiga Email: michal.smiga@kwcz.cz\n' + 'Telefón: 725 747 519\n' + 'Adresa: Kaprova 52/6 Praha 1'
+      },
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'Ing. Michal Šmiga / Kontakt'
+      }
+    ]
   }
 }
 </script>
