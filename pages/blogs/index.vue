@@ -3,7 +3,7 @@
     <b-container fluid class="header-section">
       <h1 class="ml-5">{{$t('Blogs')}}</h1>
     </b-container>
-    <b-container>
+    <b-container v-if="posts.length">
       <b-row>
         <PostPreview
           v-for="post in posts"
@@ -16,6 +16,9 @@
           class="col-xl-6"
         />
       </b-row>
+    </b-container>
+    <b-container fluid v-else>
+      <h4>{{$t('noBlogs')}}</h4>
     </b-container>
   </section>
 </template>

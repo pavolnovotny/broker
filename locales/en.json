@@ -24,6 +24,7 @@
     "goHome": "Go Home"
   },
   "Blogs": "Blogs",
+  "noBlogs": "No articles have been added yet.",
   "message": "Bonjour",
   "cookies": {
     "text": "The operator of this website uses cookies to ensure the functionality of this website and, with your consent, also for a better user experience and to analyze traffic and the way the website is used.",
@@ -31,6 +32,7 @@
   },
   "propertyOffers": {
     "header": "Property offers",
+    "noOffers": "No real estate offers have been added yet.",
     "onSale": "On Sale",
     "onRent": "On Rent",
     "city": "City",

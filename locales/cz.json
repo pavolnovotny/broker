@@ -24,6 +24,7 @@
     "goHome": "Jet Domů"
   },
   "Blogs": "Články",
+  "noBlogs": "Zatím nebyly přidány žádné články.",
   "message": "cc",
   "cookies": {
     "text": "Provozovatel této webové stránky používá cookies pro zajištění funkčnosti tohoto webu a s Vaším souhlasem také pro lepší uživatelský zážitek a pro analýzu návštěvnosti a způsobu využívání webu.",
@@ -31,6 +32,7 @@
   },
   "propertyOffers": {
     "header": "Nabídka nemovitostí",
+    "noOffers": "Zatím nebyly přidány žádné nabídky nemovitosti.",
     "onSale": "Na prodej",
     "onRent": "Na prenájem",
     "city": "Město",

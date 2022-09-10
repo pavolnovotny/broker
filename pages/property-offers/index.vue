@@ -3,7 +3,7 @@
     <b-container fluid class="header-section">
       <h1 class="ml-5">{{$t('propertyOffers.header')}}</h1>
     </b-container>
-    <b-container>
+    <b-container v-if="properties.length">
       <b-row>
         <Preview
           v-for="property in properties"
@@ -22,6 +22,9 @@
           class="col-xl-6 mt-2 mb-4"
         />
       </b-row>
+    </b-container>
+    <b-container fluid v-else>
+      <h4>{{$t('propertyOffers.noOffers')}}</h4>
     </b-container>
   </section>
 </template>
@@ -83,11 +86,6 @@ export default {
           })
         }
       })
-  },
-  data () {
-    return {
-      properties: []
-    }
   }
 }
 </script>

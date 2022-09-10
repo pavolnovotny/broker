@@ -24,6 +24,7 @@
     "goHome": "Isť Domov"
   },
   "Blogs": "Články",
+  "noBlogs": "Zatiaľ neboli pridané žiadne články",
   "message": "Bonjour",
   "cookies": {
     "text": "Prevádzkovateľ tohto webu používa cookies na zabezpečenie funkčnosti tohto webu a s vaším súhlasom aj pre lepšiu používateľskú skúsenosť a analýzu návštevnosti a spôsobu používania webu.",
@@ -31,6 +32,7 @@
   },
   "propertyOffers": {
     "header": "Ponuka nehnuteľností",
+    "noOffers": "Zatiaľ neboli pridané žiadne ponuky nehnuteľností.",
     "onSale": "Na predaj",
     "onRent": "Na prenájom",
     "city": "Mesto",
