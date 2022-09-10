@@ -114,6 +114,7 @@
     "invalidTelephone": "Nesprávny tvar telefónného čísla.",
     "sendMeMessage": "Napíšte mi",
     "requiredField": "Vyžadované pole",
+    "toastTitle": "Vaše zpráva byla úspěšně odeslána.",
     "contactCard": {
       "motivationText": "Pokud se se mnou chcete spojit, můžete mi napsat, zavolat nebo přijít do mojí kanceláře.",
       "lookingForwardToSeeYou": "Budu se na Vás těšit !",

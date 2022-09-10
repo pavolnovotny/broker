@@ -81,11 +81,8 @@
           <div><p>* {{$t('contact.requiredField')}}</p></div>
 
           <div class="form-group">
-            <button v-b-modal.modal-1 class="btn btn-success">{{ $t('contact.Send') }}</button>
+            <button class="btn btn-success">{{ $t('contact.Send') }}</button>
           </div>
-          <b-modal id="modal-1" title="BootstrapVue">
-            <p class="my-4">Hello from modal!</p>
-          </b-modal>
         </form>
     </b-card-text>
   </b-card>
@@ -137,7 +134,11 @@ export default {
         return
       }
 
-      emailjs.sendForm('service_bvfesk3', 'template_y3h8xjf', this.$refs.form, '1SLzVUL_X0gJ4bW1g')
+      emailjs.sendForm(
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
+        this.$refs.form,
+        process.env.PUBLIC_KEY)
         .then((result) => {
           console.log('SUCCESS!', result.text)
           this.submitted = false
@@ -146,9 +147,16 @@ export default {
           this.user.telephone = null
           this.user.serviceType = null
           this.user.message = null
+          this.makeToast('success', this.$t('contact.toastTitle'))
         }, (error) => {
           console.log('FAILED...', error.text)
         })
+    },
+    makeToast (variant = null, msg) {
+      this.$bvToast.toast(msg, {
+        variant,
+        solid: true
+      })
     }
   }
 }
