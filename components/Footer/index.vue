@@ -1,9 +1,9 @@
 <template>
   <footer>
-    <cookie-law class="cookies">
-      <div slot-scope="props" class="d-flex align-content-between justify-content-center">
-        <p>{{$t('cookies.text')}}</p>
-        <b-button class="ml-2 align-self-center" variant="success" @click="props.accept">{{$t('cookies.btn')}}</b-button>
+    <cookie-law>
+      <div slot-scope="props" class="cookies d-flex">
+        <p class="d-inline-block mt-3">{{$t('cookies.text')}}</p>
+        <b-button class="ml-2 align-self-center cookies-btn" variant="success" @click="props.accept">{{$t('cookies.btn')}}</b-button>
       </div>
     </cookie-law>
     <b-container>
@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 footer {
   background-color: #06112a;
   color: rgba(255, 255, 255, 0.7);
@@ -119,4 +119,16 @@ footer {
 .cookies {
   background-color: #f3f5f1;
 }
+@media (max-width: 576px) {
+  .cookies {
+    p {
+      margin-left: 10px;
+    }
+    flex-direction: column;
+  }
+  .cookies-btn {
+    margin: auto;
+  }
+}
+
 </style>
