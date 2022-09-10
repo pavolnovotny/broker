@@ -114,7 +114,7 @@
     "invalidTelephone": "Telephone number is invalid.",
     "sendMeMessage": "Send me a message",
     "requiredField": "Required field",
-    "toastTitle": "Your message has been sent."
+    "toastTitle": "Your message has been sent.",
     "contactCard": {
       "motivationText": "If you would like to get in touch with me, you can write me, call me or come to my office.",
       "lookingForwardToSeeYou": "I will look forward to seeing you!",
