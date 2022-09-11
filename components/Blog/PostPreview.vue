@@ -2,7 +2,7 @@
   <div class="wrapper">
     <nuxt-link
       :key="id"
-      :to="`/blogs/${id}`"
+      :to="`${$route.fullPath}/${id}`"
       class="preview"
     >
       <b-card :title="title" :img-src="thumbnailImage" :img-alt="title" img-top>

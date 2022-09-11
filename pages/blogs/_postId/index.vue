@@ -11,13 +11,13 @@
 <script>
 export default {
   name: 'index-blog',
-  // nuxtI18n: {
-  //   paths: {
-  //     cz: `/clanky/${this.$route.params.postId}`,
-  //     sk: `/clanky/${this.$route.params.postId}`,
-  //     en: `/blogs/${this.$route.params.postId}`
-  //   }
-  // },
+  nuxtI18n: {
+    paths: {
+      cz: '/clanky/:postId',
+      sk: '/clanky/:postId',
+      en: '/blogs/:postId'
+    }
+  },
   asyncData (context) {
     return context.app.$storyapi.get('cdn/stories/blog/' + context.params.postId, {
       version: context.isDev ? 'draft' : 'published'

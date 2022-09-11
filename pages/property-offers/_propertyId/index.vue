@@ -71,6 +71,13 @@ import ContactForm from '../../../components/ContactForm'
 
 export default {
   name: 'propertyId-index',
+  nuxtI18n: {
+    paths: {
+      cz: '/nabidka-nemovitosti/:propertyId',
+      sk: '/ponuka-nehnutelnosti/:propertyId',
+      en: '/property-offers/:propertyId'
+    }
+  },
   components: {
     Carousel,
     Video,
@@ -78,6 +85,14 @@ export default {
     ContactForm,
     BIconCheckCircleFill
   },
+  // export default {
+  //   async asyncData ({ store }) {
+  //     await store.dispatch('i18n/setRouteParams', {
+  //       en: { pathMatch: 'my-post/abc' },
+  //       fr: { pathMatch: 'mon-article/xyz' }
+  //     })
+  //   }
+  // }
   asyncData (context) {
     return context.app.$storyapi.get('cdn/stories/property-offers/' + context.params.propertyId, {
       version: context.isDev ? 'draft' : 'published'
@@ -97,7 +112,8 @@ export default {
         isOnSale: res.data.story.content.isOnSale,
         description: res.data.story.content.description,
         video: res.data.story.content.video,
-        map: res.data.story.content.map
+        map: res.data.story.content.map,
+        id: res.data.story.slug
       }
     })
   },

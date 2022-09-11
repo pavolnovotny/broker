@@ -2,7 +2,7 @@
   <div>
     <nuxt-link
       :key="id"
-      :to="`/property-offers/${id}`"
+      :to="`${$route.fullPath}/${id}`"
       class="preview"
     >
       <b-card :title="title" :img-src="heroImage" :img-alt="title" img-top class="position-relative">
