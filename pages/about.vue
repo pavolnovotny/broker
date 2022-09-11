@@ -35,7 +35,7 @@ export default {
     }
   },
   head: {
-    title: 'O mne',
+    title: 'Ing. Michal Šmiga - o mne',
     meta: [
       {
         hid: 'description',

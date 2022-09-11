@@ -35,7 +35,7 @@ export default {
     }
   },
   head: {
-    title: 'Články',
+    title: 'Ing. Michal Šmiga - Články',
     meta: [
       {
         hid: 'description',
@@ -52,30 +52,27 @@ export default {
   components: {
     PostPreview
   },
-  asyncData (context) {
-    return context.app.$storyapi
-      .get('cdn/stories/', {
-        version: context.isDev ? 'draft' : 'published',
-        starts_with: 'blog/'
-      })
-      .then((res) => {
-        console.log(res.data)
-        return {
-          posts: res.data.stories.map((bp) => {
-            return {
-              id: bp.slug,
-              title: bp.content.title,
-              previewText: bp.content.summary,
-              thumbnailUrl: bp.content.thumbnail,
-              createdAt: bp.created_at
-            }
-          })
-        }
-      })
-  },
-  data () {
-    return {
-      posts: []
+  async asyncData ({ app, isDev }) {
+    try {
+      const res = await app.$storyapi
+        .get('cdn/stories/', {
+          version: isDev ? 'draft' : 'published',
+          starts_with: 'blog/'
+        })
+      return {
+        posts: res.data.stories.map((bp) => {
+          return {
+            id: bp.slug,
+            title: bp.content.title,
+            previewText: bp.content.summary,
+            thumbnailUrl: bp.content.thumbnail,
+            createdAt: bp.created_at
+          }
+        })
+      }
+    } catch (e) {
+      console.error(e)
+      return []
     }
   }
 }

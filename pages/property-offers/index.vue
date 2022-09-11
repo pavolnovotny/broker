@@ -41,7 +41,7 @@ export default {
     }
   },
   head: {
-    title: 'Ponuka nemovitosti',
+    title: 'Ing. Michal Šmiga - Ponuka nemovitosti',
     meta: [
       {
         hid: 'description',
@@ -58,34 +58,36 @@ export default {
   components: {
     Preview
   },
-  asyncData (context) {
-    return context.app.$storyapi
-      .get('cdn/stories/', {
-        version: context.isDev ? 'draft' : 'published',
-        starts_with: 'property-offers/'
-      })
-      .then((res) => {
-        console.log(res.data.stories)
-        return {
-          properties: res.data.stories.map((prop) => {
-            return {
-              id: prop.slug,
-              title: prop.content.title,
-              price: prop.content.price,
-              disposition: prop.content.disposition,
-              isReady: prop.content.isReady,
-              usableArea: prop.content.usableArea,
-              images: prop.content.images,
-              heroImage: prop.content.heroImage,
-              street: prop.content.street,
-              city: prop.content.city,
-              keyParameters: prop.content.keyParameters,
-              isOnSale: prop.content.isOnSale,
-              isReserved: prop.content.isReserved
-            }
-          })
-        }
-      })
+  async asyncData ({ app, isDev }) {
+    try {
+      const res = await app.$storyapi
+        .get('cdn/stories/', {
+          version: isDev ? 'draft' : 'published',
+          starts_with: 'property-offers/'
+        })
+      return {
+        properties: res.data.stories.map((prop) => {
+          return {
+            id: prop.slug,
+            title: prop.content.title,
+            price: prop.content.price,
+            disposition: prop.content.disposition,
+            isReady: prop.content.isReady,
+            usableArea: prop.content.usableArea,
+            images: prop.content.images,
+            heroImage: prop.content.heroImage,
+            street: prop.content.street,
+            city: prop.content.city,
+            keyParameters: prop.content.keyParameters,
+            isOnSale: prop.content.isOnSale,
+            isReserved: prop.content.isReserved
+          }
+        })
+      }
+    } catch (e) {
+      console.error(e)
+      return []
+    }
   }
 }
 </script>

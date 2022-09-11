@@ -18,11 +18,11 @@ export default {
       en: '/blogs/:postId'
     }
   },
-  asyncData (context) {
-    return context.app.$storyapi.get('cdn/stories/blog/' + context.params.postId, {
-      version: context.isDev ? 'draft' : 'published'
-    }).then((res) => {
-      console.log(res.data)
+  async asyncData ({ app, params, isDev }) {
+    try {
+      const res = await app.$storyapi.get('cdn/stories/blog/' + params.postId, {
+        version: isDev ? 'draft' : 'published'
+      })
       return {
         id: res.data.story.slug,
         blok: res.data.story.content,
@@ -30,14 +30,10 @@ export default {
         title: res.data.story.content.title,
         content: res.data.story.content.content
       }
-    })
-  },
-  mounted () {
-    // this.$storyblok.init()
-    // this.$storyblok.on('change', () => {
-    //   location.reload(true)
-    // })
-    console.log(this.$route)
+    } catch (e) {
+      console.error(e)
+      return {}
+    }
   }
 }
 </script>

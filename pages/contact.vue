@@ -42,7 +42,7 @@ export default {
     }
   },
   head: {
-    title: 'Kontakt',
+    title: 'Ing. Michal Šmiga - Kontakt',
     meta: [
       {
         hid: 'description',

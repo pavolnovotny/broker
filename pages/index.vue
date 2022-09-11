@@ -21,7 +21,7 @@ export default {
     OfferedServices
   },
   head: {
-    title: 'HomePage',
+    title: 'Ing. Michal Šmiga - domov',
     meta: [
       {
         hid: 'description',

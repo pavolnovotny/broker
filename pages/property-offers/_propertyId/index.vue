@@ -78,6 +78,21 @@ export default {
       en: '/property-offers/:propertyId'
     }
   },
+  head: {
+    title: 'Ing. Michal Šmiga - Ponuka nemovitosti',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Ponuka nemovitosti'
+      },
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'Ing. Michal Šmiga / Ponuka nemovitosti'
+      }
+    ]
+  },
   components: {
     Carousel,
     Video,
@@ -85,19 +100,12 @@ export default {
     ContactForm,
     BIconCheckCircleFill
   },
-  // export default {
-  //   async asyncData ({ store }) {
-  //     await store.dispatch('i18n/setRouteParams', {
-  //       en: { pathMatch: 'my-post/abc' },
-  //       fr: { pathMatch: 'mon-article/xyz' }
-  //     })
-  //   }
-  // }
-  asyncData (context) {
-    return context.app.$storyapi.get('cdn/stories/property-offers/' + context.params.propertyId, {
-      version: context.isDev ? 'draft' : 'published'
-    }).then((res) => {
-      return {
+  async asyncData ({ app, params, isDev }) {
+    try {
+      const res = await app.$storyapi.get('cdn/stories/property-offers/' + params.propertyId, {
+        version: isDev ? 'draft' : 'published'
+      })
+      const property = {
         blok: res.data.story.content,
         title: res.data.story.content.title,
         content: res.data.story.content.content,
@@ -115,22 +123,20 @@ export default {
         map: res.data.story.content.map,
         id: res.data.story.slug
       }
-    })
+      return property
+    } catch (e) {
+      console.error(e)
+      return {}
+    }
   },
   computed: {
     keyParametersArray () {
-      return this.keyParameters.split(',')
+      return this.keyParameters?.split(',')
     },
     onSaleText () {
       return this.isOnSale ? this.$t('propertyOffers.onSale') : this.$t('propertyOffers.onRent')
     }
   }
-  // mounted () {
-  //   this.$storyblok.init()
-  //   this.$storyblok.on('change', () => {
-  //     location.reload(true)
-  //   })
-  // }
 }
 </script>
 
