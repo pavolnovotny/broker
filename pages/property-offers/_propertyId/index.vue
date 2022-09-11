@@ -38,11 +38,6 @@
                   <Video :src="video"/>
                 </b-card-text>
               </b-tab>
-              <b-tab :title="$t('propertyOffers.videoTour')">
-                <b-card-text>
-                  <Map :src="map"/>
-                </b-card-text>
-              </b-tab>
             </b-tabs>
           </b-card>
         </div>
