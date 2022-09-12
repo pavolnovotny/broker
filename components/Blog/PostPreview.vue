@@ -3,7 +3,7 @@
     <nuxt-link
       :key="id"
       :to="`${$route.fullPath}/${id}`"
-      class="preview"
+      class="mb-5"
     >
       <b-card :title="title" :img-src="thumbnailImage" :img-alt="title" img-top>
         <b-card-text>
@@ -63,10 +63,5 @@ export default {
   background-size: cover;
   width: 100%;
   height: 10rem;
-}
-
-.wrapper {
-  max-width: 350px;
-  margin-bottom: 20px;
 }
 </style>

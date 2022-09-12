@@ -3,7 +3,7 @@
     <nuxt-link
       :key="id"
       :to="`${$route.fullPath}/${id}`"
-      class="preview"
+      class="mb-5"
     >
       <b-card :title="title" :img-src="heroImage" :img-alt="title" img-top class="position-relative">
         <div class="wrapper-labels">
@@ -91,9 +91,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.card {
-  max-width: 350px;
-}
 .wrapper-labels {
   position: absolute;
   top: 20px;

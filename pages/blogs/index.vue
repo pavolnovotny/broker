@@ -13,7 +13,7 @@
           :thumbnail-image="post.thumbnailUrl"
           :id="post.id"
           :created-at="post.createdAt"
-          class="col-xl-6"
+          class="col-xl-4 col-md-6 col-sm-12 mt-2 mb-4"
         />
       </b-row>
     </b-container>

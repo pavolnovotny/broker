@@ -4,7 +4,7 @@
       <h1 class="ml-5">{{$t('propertyOffers.header')}}</h1>
     </b-container>
     <b-container v-if="properties.length">
-      <b-row>
+      <b-row class="justify-content-center">
         <Preview
           v-for="property in properties"
           :key="property.id"
@@ -19,7 +19,7 @@
           :disposition="property.disposition"
           :usable-area="property.usableArea"
           :isReserved="property.isReserved"
-          class="col-xl-6 mt-2 mb-4"
+          class="col-xl-4 col-md-6 col-sm-12 mt-2 mb-4"
         />
       </b-row>
     </b-container>
