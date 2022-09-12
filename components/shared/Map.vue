@@ -1,6 +1,6 @@
 <template>
   <iframe :src="src"
-          width="930"
+          width="1114"
           height="450"
           style="border:0;"
           allowfullscreen=""

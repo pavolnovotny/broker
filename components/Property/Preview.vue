@@ -3,7 +3,7 @@
     <nuxt-link
       :key="id"
       :to="`${$route.fullPath}/${id}`"
-      class="mb-5"
+      class="mb-5 preview"
     >
       <b-card :title="title" :img-src="heroImage" :img-alt="title" img-top class="position-relative">
         <div class="wrapper-labels">
@@ -39,7 +39,7 @@ export default {
       required: true
     },
     price: {
-      type: Number,
+      type: String,
       required: true
     },
     disposition: {

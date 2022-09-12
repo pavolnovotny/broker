@@ -5,50 +5,38 @@
     </b-container>
     <b-container>
       <Carousel :images="images"/>
-        <div class="mt-4 mb-4">
-          <b-card no-body>
-            <b-tabs card>
-              <b-tab :title="$t('propertyOffers.mainParameters')" active>
-                <b-card-text>
-                  <div>
-                    <ul class="main-keys list-unstyled">
-                      <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.propertyCondition')}}: </strong><span>{{onSaleText}}</span></li>
-                      <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.city')}}: </strong><span>{{city}}</span></li>
-                      <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.street')}}: </strong><span>{{street}}</span></li>
-                      <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.disposition')}}: </strong><span>{{disposition}}</span></li>
-                      <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.area')}}: </strong><span>{{usableArea}} m²</span></li>
-                    </ul>
-                  </div>
-                </b-card-text>
-              </b-tab>
-              <b-tab :title="$t('propertyOffers.keyParameters')">
-                <b-card-text>
-                  <div>
-                    <ul class="list-unstyled key-params">
-                      <li v-for="(param, i) in keyParametersArray" :key="i" class="mt-1 mb-1" ><BIconCheckCircleFill/> {{param}}</li>
-                    </ul>
-                  </div>
-                </b-card-text>
-              </b-tab>
-              <b-tab :title="$t('propertyOffers.description')">
-                <b-card-text>{{ description }}</b-card-text>
-              </b-tab>
-              <b-tab :title="$t('propertyOffers.videoTour')">
-                <b-card-text>
-                  <Video :src="video"/>
-                </b-card-text>
-              </b-tab>
-            </b-tabs>
-          </b-card>
-        </div>
+      <div class="card mt-4">
+        <h2 class="text-center">{{$t('propertyOffers.mainParameters')}}</h2>
+        <ul class="main-keys list-unstyled mt-2">
+          <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.propertyCondition')}}: </strong><span>{{onSaleText}}</span></li>
+          <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.city')}}: </strong><span>{{city}}</span></li>
+          <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.street')}}: </strong><span>{{street}}</span></li>
+          <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.disposition')}}: </strong><span>{{disposition}}</span></li>
+          <li class="mt-1 mb-1"><strong>{{$t('propertyOffers.area')}}: </strong><span>{{usableArea}} m²</span></li>
+        </ul>
+      </div>
+      <div class="card mt-4">
+        <h2 class="text-center">{{$t('propertyOffers.keyParameters')}}</h2>
+        <ul class="list-unstyled key-params mt-2">
+          <li v-for="(param, i) in keyParametersArray" :key="i" class="mt-1 mb-1" ><BIconCheckCircleFill/> {{param}}</li>
+        </ul>
+      </div>
+      <div class="card mt-4">
+        <h2 class="text-center">{{$t('propertyOffers.description')}}</h2>
+        <p class="mt-2">{{description}}</p>
+      </div>
+      <div class="card mt-4">
+        <h2 class="text-center">{{$t('propertyOffers.videoTour')}}</h2>
+        <Video :src="video"/>
+      </div>
     </b-container>
     <b-container fluid>
-      <b-row class="justify-content-center">
+      <b-row class="justify-content-center mt-4">
         <Map :src="map"/>
       </b-row>
     </b-container>
     <b-container class="mt-4 mb-4">
-      <div class="d-flex flex-column align-items-center price-list">
+      <div class="d-flex flex-column align-items-center card">
         <h4>{{$t('propertyOffers.price')}}: {{ price }}Kč</h4>
         <h4>{{$t('propertyOffers.countMortgage')}} <a target="_blank" href="https://www.hypo-portal.cz">www.hypo-portal.cz</a> </h4>
       </div>
@@ -147,7 +135,7 @@ export default {
   background-size: cover;
   background-position: center;
 }
-.price-list {
+.card {
   background-color: #f3f5f1;
   padding: 30px 20px;
 }

@@ -3,7 +3,7 @@
     <nuxt-link
       :key="id"
       :to="`${$route.fullPath}/${id}`"
-      class="mb-5"
+      class="mb-5 preview"
     >
       <b-card :title="title" :img-src="thumbnailImage" :img-alt="title" img-top>
         <b-card-text>

@@ -4,7 +4,7 @@
       <h1 class="ml-5">{{$t('propertyOffers.header')}}</h1>
     </b-container>
     <b-container v-if="properties.length">
-      <b-row class="justify-content-center">
+      <b-row>
         <Preview
           v-for="property in properties"
           :key="property.id"
