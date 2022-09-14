@@ -21,6 +21,7 @@ export default {
   async asyncData ({ app, params, isDev }) {
     try {
       const res = await app.$storyapi.get('cdn/stories/blog/' + params.postId, {
+        language: app.i18n.localeProperties.code,
         version: isDev ? 'draft' : 'published'
       })
       return {

@@ -1,5 +1,5 @@
 <template>
-  <section class=" mb-0">
+  <section data-aos="slide-left" class="mb-0">
     <b-container>
       <main>
         <b-row>

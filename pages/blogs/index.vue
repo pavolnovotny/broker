@@ -57,8 +57,10 @@ export default {
       const res = await app.$storyapi
         .get('cdn/stories/', {
           version: isDev ? 'draft' : 'published',
+          language: app.i18n.localeProperties.code,
           starts_with: 'blog/'
         })
+
       return {
         posts: res.data.stories.map((bp) => {
           return {

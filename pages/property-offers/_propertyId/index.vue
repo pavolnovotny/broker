@@ -91,7 +91,8 @@ export default {
   async asyncData ({ app, params, isDev }) {
     try {
       const res = await app.$storyapi.get('cdn/stories/property-offers/' + params.propertyId, {
-        version: isDev ? 'draft' : 'published'
+        version: isDev ? 'draft' : 'published',
+        language: app.i18n.localeProperties.code
       })
       const property = {
         blok: res.data.story.content,

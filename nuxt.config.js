@@ -53,8 +53,12 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~plugins/vue-cookie-law.js', ssr: false },
-    {src: '~/plugins/vuelidate.js', ssr: false}
+    {src: '~/plugins/vuelidate.js', ssr: false},
+    { src: "~/plugins/aos", mode: "client" },
   ],
+  purgeCSS: {
+    whitelist: ['aos-init', 'aos-animate', 'data-aos-delay', 'data-aos-duration', 'fade-up', 'zoom-in'],
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -93,7 +97,7 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
-    ['storyblok-nuxt', {accessToken: process.env.NODE_ENV === 'production' ? 'CLgiCKTz3143Rpqafb89Wgtt' : 'QLa9drCU8R4C8kNmnOg06Qtt', cacheProvider: 'memory'}],
+    ['storyblok-nuxt', {accessToken: process.env.NODE_ENV === 'production' ? 'IKp18IHewACh8EVGXIie2wtt' : 'BupKvuztqQ5QBISuIn0bkAtt', cacheProvider: 'memory'}],
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
