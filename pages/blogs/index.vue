@@ -60,7 +60,7 @@ export default {
           language: app.i18n.localeProperties.code,
           starts_with: 'blog/'
         })
-
+      console.log(res)
       return {
         posts: res.data.stories.map((bp) => {
           return {

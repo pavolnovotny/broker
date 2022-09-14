@@ -9,13 +9,14 @@
         <b-card-text>
           {{excerpt}}
         </b-card-text>
-        <b-card-text class="small text-muted">Last updated {{time}}</b-card-text>
+        <b-card-text class="small text-muted">Last updated {{timestamp}}</b-card-text>
       </b-card>
     </nuxt-link>
   </div>
 </template>
 
 <script>
+import moment from 'moment'
 export default {
   name: 'PostPreview-index',
   props: {
@@ -41,10 +42,21 @@ export default {
     }
   },
   computed: {
-    time () {
-      const date = new Date(this.createdAt)
-      console.log(date)
-      return date.toISOString()
+    getCookie () {
+      const code = this.$cookies?.get('i18n_redirected') ?? null
+      switch (code) {
+        case 'cz':
+          return 'cs'
+        case 'sk':
+          return 'sk'
+        case 'en':
+          return 'en'
+        default:
+       return 'cs'
+      }
+    },
+    timestamp () {
+      return moment(this.createdAt).locale(this.getCookie).startOf('hour').fromNow()
     }
   }
 }

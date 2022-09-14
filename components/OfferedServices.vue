@@ -1,5 +1,5 @@
 <template>
-  <section data-aos="slide-right" class="text-center pt-5 pb-5">
+  <section class="text-center pt-5 pb-5">
     <h1 class="mb-4">{{ $t('offered services') }}</h1>
     <b-button class="cta" variant="success">
       <a target="_blank" href="https://www.canva.com/design/DAFHH3VdTYE/KdE4xFI65qJkw2XfKKr9KA/view?utm_content=DAFHH3VdTYE&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent">

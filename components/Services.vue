@@ -1,5 +1,5 @@
 <template>
-  <section id="services" data-aos="slide-right">
+  <section id="services">
     <b-container>
       <h1 class="pt-5 pb-5 text-center">{{ $t('services.Services') }}</h1>
       <b-row>
